@@ -10,10 +10,11 @@
     }
 
 .header{
-    height: 12%;
+    position:absolute;
+    height: 50px;
     width: 100%;
-    position: absolute;
     background-color:#364d38;
+    margin-top:5px;
 }
 
 .logo{
@@ -21,21 +22,17 @@
     padding-left: 60px;
     padding-top: 5px;
     margin-left: 70px;
-    margin-top: 5px;
 }
 .logoImage{
     width: 20%;
     padding-left: 60px;
     padding-top: 5px;
     margin-left: 70px;
-    margin-top: 5px;
-}
-h4{
-    text-align: center;
 }
 .navbar{
     position: absolute;
     margin-left: 400px;
+    margin-top:5px;
 }
 .dropdown{
     float: left;
@@ -59,7 +56,6 @@ h4{
     background-color: inherit;
     font-family: inherit;
     margin-left: 0px;
-    margin-top:14px;
 }
 .imgs{
             padding-left: 3px;
@@ -102,12 +98,13 @@ h4{
             }
            
             .services{
-                
-                text-align: center;
+                text-align:center;
+                width:100%;
                 color: #2a2e29;
                 font-size: 25px;
-                margin-top: 50px;
-                padding-top: 10px;
+                margin-top:40px;
+                padding-top:10px;
+                position:absolute;
                 
             }
             hr.underline{
@@ -119,13 +116,13 @@ h4{
                 height: 80%;
                 position: absolute;
                 top: 150px;
-                left: 20px;
-                background-color: gray;
+                left: 0px;
+                background-color: white;
             
             }
             .content{
                 position: absolute;
-                width: 35%;
+                width: 40%;
                 font-size: 20px;
                 color: #2a2e29;
                 padding-left: 100px;
@@ -133,6 +130,7 @@ h4{
             }
             .ultype{
                 position: absolute;
+                margin-top:10px;
 
             }
             ul.list1{
@@ -153,15 +151,16 @@ h4{
             .contact{
                 position: absolute;
                 width: 100%;
-                margin-top: 500px;
-                margin-left: 20px;
-                background-color:red;
+                margin-top: 670px;
+                margin-left: 10px;
+                backgrounds color: gray;
+               
             }
             .link{
                 position: absolute;
                 width: 25%;
-                padding-left: 100px;
-                padding-top: 30px;
+                padding-left: 10px;
+                padding-top: 10px;
                
                
             }
@@ -175,13 +174,12 @@ h4{
             }
             .contactlink{
                 position: absolute;
-                width: 30%;
+                width: 40%;
                 margin-left: 25%;
                 padding-left: 50px;
                 padding-top: 30px;
                 font-size: 15px;  
                 text-align: left;
-                background-color:red;
             }
             .clist{
                 list-style-type: none;
@@ -226,7 +224,7 @@ h4{
         <div class="navbar">
             <a href="#">Home</a>
             <div class="dropdown">
-                <button class="dropbtn" style="background-color: #364d38; color:white; border: none; font-size: 16px; margin-top: 14px;">AboutUs</button><img src="https://hostk.github.io/pre_intern01/image/dropdown.png" width="10px" class="imgs">
+                <button class="dropbtn" style="background-color: #364d38; color:white; border: none; font-size: 16px; margin-top: 14px;">AboutUs</button><img src="image/dropdown.png" width="10px" class="imgs">
                 <div class="dropdown-content">
                     <a href="#">Profile</a>
                     <a href="#">Our Structure</a>
@@ -247,8 +245,7 @@ h4{
             <a href="#">Contact Us</a>
         </div>
     </div>
-    
-    <div class="services"><p>Our Services<hr class="underline"></hr></p></div>
+     <div  class="services"><p>Our Services<hr class="underline"></hr></p></div>
          <div class="mainbody">
             <div class="content">
                 <p>You’re Solution for Industrial Development and Construction in Myanmar.</p>
@@ -263,8 +260,8 @@ h4{
                 MDN Reference <li>Main Contractor</li>
                 </ul>
                 <p>Whatever we do, wherever are in construction, the impact for time, budget and quality is beyond customer expectation.</p>
-                <h3>Projects</h3>
-                <ul class="list2">
+                <h4>Projects</h4>
+                <ul class="ultype">
                     <li>Construction & Interior</li>
                     <li>Commercial</li>
                     <li>Industrial</li>
@@ -286,7 +283,7 @@ h4{
         </div>
         <div class="contact">
             <div class="link">
-                <h4 class="underline">QUICK LINK</h4>
+                <h4 class="underline" style="text-align:left; margin-left:20px;">QUICK LINK</h4>
                 <ul>
                     <li class="linkls"><a href=" ">Home</a></li>
                     <li class="linkls"><a href=" ">About Us</a></li>
@@ -296,7 +293,7 @@ h4{
                 </ul>
             </div>
             <div class="contactlink">
-                <h4 class="underline">Contact Us</h4>
+                <h4 class="underline" style="text-align:center;">Contact Us</h4>
                 <ul>
                     <li class="clist"><img src="image/location.png"/>Room – 1008, 10th Floor, Building - B, 50th Street Condominium, 50th Street, Botahtaung Township, Yangon, Myanmar.</li>
                     <li class="clist"><img src="image/phone.png">+(95) 9 4512 999 88, +(95) 9 535 1714</li>
@@ -314,5 +311,8 @@ h4{
                 <a href="https://hostmyanmar.net">Host Myanmar</a>
             </div>
         </div>    
+    </body>
+</html>
+       </div>    
     </body>
 </html>

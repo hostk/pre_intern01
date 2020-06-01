@@ -4,16 +4,16 @@
 <title>Contact</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 <style>
-    .container{
-        width: 100%;
-        height: 100%;
-    }
+.container{
+            width:100%;
+}
 
 .header{
-    height: 12%;
+    position:absolute;
+    height: 50px;
     width: 100%;
-    position: absolute;
     background-color:#364d38;
+    margin-top:5px;
 }
 
 .logo{
@@ -21,21 +21,17 @@
     padding-left: 60px;
     padding-top: 5px;
     margin-left: 70px;
-    margin-top: 5px;
 }
 .logoImage{
     width: 20%;
     padding-left: 60px;
     padding-top: 5px;
     margin-left: 70px;
-    margin-top: 5px;
-}
-h4{
-    text-align: center;
 }
 .navbar{
     position: absolute;
     margin-left: 400px;
+    margin-top:5px;
 }
 .dropdown{
     float: left;
@@ -59,7 +55,6 @@ h4{
     background-color: inherit;
     font-family: inherit;
     margin-left: 0px;
-    margin-top:14px;
 }
 .imgs{
             padding-left: 3px;
@@ -91,12 +86,26 @@ h4{
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+            li.navli{
+                list-style-type: none;
+                display: inline;
+                font-size: 20px;
+                padding-left: 30px;
+                color: white;
+                
+            }
         hr.underline{
                 border-top: 1px solid green;
                 width: 250px;
             }
+            .mainbody{
+                 width:100%;
+                 height:60%;
+                 position:absolute;
+}
             .title{
-                margin-top: 10%;
+                margin-top: 150px;
                 text-align: center;
                 color: #2a2e29;
                 font-size: 25px;
@@ -106,18 +115,94 @@ h4{
                 position: absolute;
                 width: 40%;
                 padding-left: 50px;
-                font-size: 20px;
+                font-size: 20x;
             }
+           .fillcontact{
+                 position:absolute;
+                 width:100%;
+                 margin-left:50%;
+                 padding-top:20px;
+}
+           .fillform{
+               font-size:20px;
+}
+           .input{
+               width:350px;
+               font-size:20px;
+               margin-top:10px;
+               margin-bottom:20px
+}
+           .messagebox{
+                 width:350px;
+                 height:200px;
+                 font-size:20px;
+                 margin-top:10px;
+                 margin-bottom:20px;
+}
+            .submit{
+                background-color:green;
+                font-size:20px;
+                 margin-left:300px;
+}
             .contact{
-                margin-top: 20px;
                 position: absolute;
-                margin-left: 50%;
-                padding: 10px;
-            }
-            textbox{
                 width: 100%;
+                margin-top: 600px;
+                margin-left: 10px;
+                background-color: gray;
+               
             }
-
+            .link{
+                position: absolute;
+                width: 25%;
+                padding-left: 10px;
+                padding-top: 10px;
+               
+               
+            }
+            .linkls{
+                list-style-type: none;
+                font-size: 15px;
+                color: #2a2e29;
+                line-height: 25px;
+                margin-left: 10%;
+                
+            }
+            
+  .contactlink{
+                position: absolute;
+                width: 40%;
+                margin-left: 25%;
+                padding-left: 50px;
+                padding-top: 30px;
+                font-size: 15px;  
+                text-align: left;
+            }
+            .clist{
+                list-style-type: none;
+                color: #2a2e29;
+                line-height: 20px;
+                margin-left:5%;
+            }
+            .facebooklink{
+                position: absolute;
+                margin-left: 70%;
+                padding-top: 30px;
+               
+            }
+            .underline{
+                text-decoration: underline solid 2px green;
+               
+            }
+            .footer{
+                position: absolute;
+                width: 100%;
+                height: 7%;
+                margin-top: 900px;
+                background-color: #364d38;
+                text-align: center;
+                padding-top: 10px;
+            }
 </style>
 </head>
 <body>
@@ -134,7 +219,7 @@ h4{
                         <a href="#">Our Commitment</a>
                     </div>
                 </div>
-                <a href="contact.html">Service</a>
+                <a href="sterlingmyanmarservice.html">Service</a>
                           <div class="dropdown">
                             <button class="dropbtn"style="background-color: #364d38; color:white; border: none; font-size: 16px; margin-top: 14px;">Projects</button><img src="image/dropdown.png" width="10px" class="imgs">
                               <div class="dropdown-content">
@@ -149,32 +234,73 @@ h4{
             </div>
         </div>
 <div class="mainbody">
-    <div class="title"><p>CONTACT US<hr class="underline"/></p></div>
+    <div class="title"><p>CONTACT US<hr
+class="underline"/></p></div>
         <div class="address">
-            <ul>
+.in            <ul>
             <li><img src="image/location.png"/>Room – 1008, 10th Floor, Building - B,
                 50th Street Condominium,50th Street,Botahtaung Township, Yangon, Myanmar.
             </li>        
             <li><img src="image/phone.png"/>(+95) 9 45 12 999 88, (+95) 9 535 1714</li>
-
-            <li><img src="image/email.png"/>info@sterling-myanmar.com</li>
+            <li>
+            <img src="image/email.png"/>info@sterling-myanmar.com</li>
             </ul>
 </div>
-<div class="contact">
+<div class="fillcontact">
+<p class="fillform">
 Name<br/>
-<input type="textbox" name="text" value="Name" width="100%"/>
+<input type="textbox" name="text" value="Name" class="input"/>
 <br/>
 Email<br/>
-<input type="textbox" name="email" value="Email"/>
+<input type="textbox" name="email" value="Email" class="input"/>
 <br/>
 Phone <br/>
-<input type="textbox" name="phone" value="Phone"/>
+<input type="textbox" name="phone" value="Phone" class="input"/>
 <br/>
 Message<br/>
-<input type="textbox" name="message" value="Message"/>
+<input type="text" name="message" value="Message" class="messagebox"/>
 <br/>
-<input type="submit" name="submit" value="submit"/>
+<input type="submit" name="submit" value="sent" tyle="text-align:right;" class="submit"/>
+</p>
 </div>
+<div class="contact">
+            <div class="link">
+                <h4 class="underline" style="text-align:left; margin-left:20px;">QUICK LINK</h4>
+                <ul>
+                    <li class="linkls"><a href=" ">Home</a></li>
+                    <li class="linkls"><a href=" ">About Us</a></li>
+                    <li class="linkls"><a href=" ">Services</a></li>
+                    <li class="linkls"><a href="">Projects</a></li>
+                    <li class="linkls"><a href=" ">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contactlink">
+                <h4 class="underline" style="text-align:center;">CONTACT US</h4>
+                <ul>
+                    <li class="clist"><img src="image/location.png"/>Room – 1008, 10th Floor, Building - B, 50th Street Condominium, 50th Street, Botahtaung Township, Yangon, Myanmar.</li>
+                    <li class="clist"><img src="image/phone.png">+(95) 9 4512 999 88, +(95) 9 535 1714</li>
+                    <li class="clist"><img src="image/email.png"/>info@sterling-myanmar.com</li>
+                </ul>
+            </div>
+
+            <div class="facebooklink">
+                <h4 class="underline" style="text-align: right;">FACEBOOK LINK</h3>
+                <a href="https://m.facebook.com/Sterling-Industrial-Technologies-Co-Ltd-167138143479014/" style="text-align: right;">Sterling Industrial Technologies</a>
+            </div>
+        </div>
+            <div class="footer">
+                Copyright@STERLING MYANMAR. All Right Reserved. | Designed By 
+                <a href="https://hostmyanmar.net">Host Myanmar</a>
+            </div>
 </div>
 </body>
 </html>
+
+html>
+
+</body>
+</html>
+
+dy>
+</html>
+
