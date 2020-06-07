@@ -95,22 +95,29 @@
         .container{
             width: 100%;
             background-image: url("image/YGN.jpg");
+            background-repeat: no-repeat;
+            z-index: 1;
+            height: 500px;
         }
         
         button{
             width: 110px;
             padding-left: 10px;
         }
-      
-        .div1{
-                width :60%;
+        .img1{  
+            width: 350px;
+            height:280px;
+            position: absolute;
+            margin: 30px ;
 }
-        .img1{
-                width : 200px;
-}
-      .div1{
-            width : 100%;
-            padding: 0px;
+      .box{
+            position: absolute;
+            border: 2px solid #880088;
+            top: 250px;
+            left: 150px;
+            width: 80%;
+            height: 75%;
+            background-color: rgba(128,128,128,0.5);
 }
     .imgg{
           width:100%;
@@ -121,13 +128,64 @@
           padding: 0px;
           margin: 0px;
 }
-  .img3{ width :600px;
+  .img3{ width :200px;
 }
 .cards{ display: grid; 
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: auto; 
-            grid-gap: 1rem; } 
+            grid-gap: 1rem;
+            margin-top: 50px;
+            margin-left: 40px; } 
 .card { border: 2px solid #e7e7e7;  
+            margin-left: 20px;
+             border-radius: 4px; 
+             padding: .5rem; }
+        .icon{
+            width: 50px;
+            background-color: orange;
+            border-style: dotted;
+            float: left;
+            margin-left: -35px;
+            margin-bottom: 20px;
+            position: absolute;
+        }
+        .bb2{
+            width: 100%;
+            height: 300px;
+            margin-top: 0px;
+        }
+        .teacherImg{
+                    position: absolute;
+                    width: 30%;
+                    margin-left: 50px;
+        }
+        .tbody{ 
+                width: 60%;
+                margin-left: 390px;
+        }
+        .btn{
+            background-color: orange;
+            border: none;
+            margin-top: 0px;
+        }
+        .hrector{
+            display: flex;
+                width: 70%;
+                margin-left: 10px;
+                line-break: auto;
+        }
+        .btnDiv{
+            margin-top: -20px;
+            text-align: right;
+        }
+        .cards1{ display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto; 
+            grid-gap: 1rem;
+            margin-top: 50px;
+            margin-left: 40px; } 
+.card1{ border: 2px solid #e7e7e7;  
+            margin-left: 20px;
              border-radius: 4px; 
              padding: .5rem; }
         </style>
@@ -220,7 +278,7 @@
             </div>
                 <div class="body">
                     <div class="container">
-                        <div class="div1">
+                        <div class="box">
                             <div class="b1">
                                 <img src="image/ATH_3252-1024x683.jpg" class="img1"/>
                                 <p> Swal Daw Leaf (Bauhinia variegata's leaf) is a representation of YTU and has a meaningful fact behind it.</p>
@@ -240,36 +298,44 @@
                     <div class="row">
                         <div class="cards">
                         <div class="card">
-                            <img src="image " />
+                            <img src="image/picon.svg" class="icon" /><br><br>
                             <h4> Our Objectives</h4>
                             <p>It is envisaged that YTU will become a highly-prestigious technological centre of excellence in teaching and research with a strong commitment to systematically educate and train.</p>
-                            <a href="#"><input type="button" value="Read More"/><img src="image/"/></a>
+                            <div class="btnDiv"><a href="#"><input type="button" value="Read More >>" class="btn"/></a></div>
                         </div>
                         <div class="card">
-                            <img src="image/" />
+                            <img src="image/cp.svg" class="icon" /><br><br>
                             <h4> Our Mission</h4>
                             <p>To educate and train students systematically to become engineers, specialists and researchers who can effectively contribute to the building of a modern developed nation.</p>
+                            <div class="btnDiv"><a href="#"><input type="button" value="Read More >>" class="btn"/></a></div>
                         </div>
                         <div class="card">
-                            <img src="image/" />
+                            <img src="image/monitor.svg" class="icon" /><br><br>
                             <h4>Programs</h4>
                             <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+                            <div class="btnDiv"><a href="#"><input type="button" value="Read More >>" class="btn"/></a></div>
                         </div>
                         </div>
                     </div>
 
                     <div class="bb2">
-                        <img src="image/" class="img2"/>
-                        <h2>Rector's Messages</h2>
+                        <img src="image/teacher.png" class="teacherImg"/>
+                        <div class="tbody">
+                        <h2 class="hrector">Rector's Messages</h2>
                         <p>Yangon Technological University is one of the best universities in Myanmar and only allows admissions of students who gained high marks from the matriculation examination. A student's majorized engineering field is also decided by the marks he earned through the matriculation examination. Currently, YTU possesses 12 Engineering Departments, 6 Supporting Departments, 1 Research Centre and 47 Laboratories. There are currently about 2000 students seeking knowledge and experiences at YTU. VISION It is…</p>
-                        <a href="#"><input type="button" class="btn" value="Read More"/><img src="image" ></a>
+                        <div class="btnDiv"><a href="#"><input type="button" value="Read More >>" class="btn"/></a></div>
+                        </div>    
                     </div>
-                    <div class="mage">
-                        <h2>YTU EVENTS</h2>
-                        <img src="image/ATH_3252-1024x683.jpg" class="img3"/>
-                        <img src="image/leaf.jpg" class ="img3"/>
-                        <img src="image/wwspzp.jpg" class="img3"/>
-                        <a href="#"><input type="button" class="btn" value="Read More"/><img src="image" ></a>
+                    <div class="bb3">
+                        <h2 style="text-align: center;">YTU EVENTS</h2>
+                        <div class="row">
+                            <div class="cards1">
+                                <div class="card1"><img src="image/ATH_3252-1024x683.jpg" class="img3"/></div>
+                                <div class="card1"><img src="image/leaf.jpg" class ="img3"/></div>
+                                <div class="card1"><img src="image/wwspzp.jpg" class="img3"/></div>
+                                <a href="#" class="btnDiv"><input type="button" value="Read More >>" class="btn"/></a>
+                            </div>
+                        </div>        
                     </div>
                     <div class="bb4">
                         <h1>WELCOME TO YOU</h1>
