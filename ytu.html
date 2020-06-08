@@ -105,18 +105,55 @@
             padding-left: 10px;
         }
         .img1{  
-            width: 350px;
+            width: 350px;#000
             height:280px;
-            position: absolute;
             margin: 30px ;
 }
+        .b1{
+            display: flex;
+        }
+        .item img {
+  width: 100%;
+  height: auto
+}
+
+.carousel {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+
+ol.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  float: left;
+  width: 33%;
+  height: 10px;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+}
+
+ol.carousel-indicators li.active {
+  background: yellow;
+}
+
       .box{
             position: absolute;
             border: 2px solid #880088;
-            top: 250px;
-            left: 150px;
-            width: 80%;
-            height: 75%;
+            top: 280px;
+            left: 200px;
+            width: 60%;
+            height: 50%;
             background-color: rgba(128,128,128,0.5);
 }
     .imgg{
@@ -173,6 +210,7 @@
                 width: 70%;
                 margin-left: 10px;
                 line-break: auto;
+                color: orange;
         }
         .btnDiv{
             margin-top: -20px;
@@ -188,6 +226,20 @@
             margin-left: 20px;
              border-radius: 4px; 
              padding: .5rem; }
+        .bb4{
+            width: 100%;
+            margin-left: 30px;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+        .orangeText{
+            color: orange;
+        }
+        h1{
+            color: orange;
+            text-align: center;
+        }
+        
         </style>
     </head>
     <body>
@@ -279,22 +331,45 @@
                 <div class="body">
                     <div class="container">
                         <div class="box">
-                            <div class="b1">
+                            <div id="carousel" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                  <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                  <li data-target="#carousel" data-slide-to="1"></li>
+                                  <li data-target="#carousel" data-slide-to="2"></li>
+                                </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item_active">
                                 <img src="image/ATH_3252-1024x683.jpg" class="img1"/>
                                 <p> Swal Daw Leaf (Bauhinia variegata's leaf) is a representation of YTU and has a meaningful fact behind it.</p>
+                                <div class="carousel-caption">
+                                    slide 1
+                                </div>   
                             </div>
-                            <div class="b2">
-                                <img src="image/leaf.jpg" class="img1"/>
+                            <div class="item">
+                                <img src="image/leaf.jpg" class="img1" alt="Slide 2"/>
                                 <h2>MINISTRY OF EDUCATION YANGON TECHNOLOGY UNIVERSITY THE SEVENTH INTERNATIONAL CONFERENCE ON SCIENCE AND ENGINEERING 2016 OPENING CEREMONY</h2>
                                 <p>Ministry of Education Yangon Technological University The Seventh International Conference on Science and Engineering 2016 Opening Ceremony</p>
+                                <div class="carousel-caption">
+                                    Slide 2
+                                </div>
                             </div>
-                            <div class="b3">
+                            <div class="item">
                                 <img src="image/wwspzp.jpg" class="img1"/>
                                 <h3>7th WWSPZP</h3>
                                 <p>World Wide Sayar Pu Zaw Pwe was held in 2016 and many alumni students of RIT attended and paid respects to their beloved teachers.</p>
+                                <div class="carousel-caption">
+                                    Slide3
+                                </div>
                             </div>
                         </div>
-                    </div>    
+                    <a class="left carousel-control" href="#carousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a> 
+                    </div>  
+                    </div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
                     <div class="row">
                         <div class="cards">
                         <div class="card">
@@ -327,7 +402,7 @@
                         </div>    
                     </div>
                     <div class="bb3">
-                        <h2 style="text-align: center;">YTU EVENTS</h2>
+                        <h2 style="text-align: center; color: orange;">YTU EVENTS</h2>
                         <div class="row">
                             <div class="cards1">
                                 <div class="card1"><img src="image/ATH_3252-1024x683.jpg" class="img3"/></div>
