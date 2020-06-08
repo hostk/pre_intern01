@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                border: 3px solid none;
+            }
+            .left{
+                width: 40%;
+                height: 1200px;
+                background-color:#7e9c8f;
+            }
+            .right{
+              width: 60%;  
+              height: 1200px;
+              background-color:white;
+              
+            }
+            .ricon{
+                width: 80px;
+                height: auto;
+            }
+            .right>p{
+                color: #bec4cf;
+            }
+            .myprofile{
+                border-radius: 50%;
+                width: 150px;
+                margin-left: 120px;
+                margin-top: 60px;
+            }
+            .about{
+                font-size: 20px;
+                text-align: justify;
+                text-indent: 50px;
+                width: 400px;
+                padding-left: 5px;
+                padding-right: 10px;
+            }
+            h3{
+                font-style: bold;
+                margin-top: 50px;
+                margin-left: 5px;
+            }
+            .edu{
+                display: flex;
+                padding-left: 50px;
+                font-size: 17px;
+               
+            }
+            li{
+                padding-top: 10px;
+                font-size: 20px;
+            }
+            hr{
+                height: 2px;
+                color: #bec4cf;
+                background-color: #bec4cf;
+            }
+            .licon{
+                width: 30px;
+            }
+            td{
+                height: 40px;
+            }
+            .fontstyle{
+                font-size: 28px;
+                font-style: bold;
+                text-align: center;
+            }
+            .rightedu{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 10px;
+            }
+            .leftedu{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 13px;
+                width: 200px;
+            }
+            p{
+                padding-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+         <div class="container">
+            <div class="left">
+               <img src="image/profile.jpg" class="myprofile">
+               <p class="fontstyle">Min Ko Ko</p>
+               <p class="fontstyle">Web Developer</p>
+               <h3>About Me:</h3>
+               <p class="about">I am Min Ko Ko. I am studying at the Computer University, Monywa. I am a final year student. I want to be a  good android developer and a good web developer.</p>
+            
+                <h3>Contact Me:</h3>
+               <table>
+                   <tr>
+                    <td><img src="image/ph.png" class="licon"></td>
+                       <td>Phone  :</td>
+                        <td>09977264873,09969237161</td>
+                   </tr>
+                   <tr>
+                    <td><img src="image/email.png" class="licon"></td>
+                    <td>Email  :</td>
+                     <td>minminko22696@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><img src="image/fb.png" class="licon"></td>
+                    <td>Facebook  :</td>
+                     <td><a href="https://web.facebook.com/profile.php?id=100016281393419">Min Ko Ko</a></td>
+                </tr>
+                <tr>
+                    <td><img src="image/location.png" class="licon"></td>
+                    <td>Location  :</td>
+                     <td>Sagaing Township,Sagaing Region</td>
+                </tr>
+               </table>
+               <h3>Hobbies:</h3>
+               <ul>
+                   <li>Reading</li>
+                   <li>Watching Movies</li>
+                   <li>Listening to music</li>  
+               </ul>
+            </div>
+            <div class="right">
+               <div class="education">
+                <img src="image/edu.png" class="ricon">
+                <h3 style="margin-top: -40px; margin-left: 80px;">Education:</h3> <hr>
+               </div>
+               <div class="edu">
+                <div class="leftedu">
+                    <p> 2004-2014   </p><br>
+                    <p>2014-now   </p> <br>
+                </div>
+                <div class="rightedu">
+                    <p>Basic Education High School(Pin Nga Sal), Sagaing Township, Sagaing Region</p>
+                    <p>Computer University Studies Monywa</p><br>
+                </div>
+            </div>
+           
+            <div class="projectexp">
+                <img src="image/project.png" class="ricon">
+                <h2 style="margin-top: -40px; margin-left: 80px;">Project Experience:</h3> <hr>
+               </div>
+               <div class="edu">
+                <div class="leftedu" style="margin-bottom: -15px;">
+                        <p>2016</p> 
+                        <p>2018</p>
+                       <p>2019-August</p>
+
+                      
+                </div>
+                <div class="rightedu">
+                    <p> Project Leader: DBMS project  (Troll Management System in Monywa)</p>
+
+                    <p> Group Project: C# and DBMS project  (Restaurant Management System for Online Booking)</p>
+                
+                    <p> Group Project: J2EE Project  (University Finder System for passed grade-11)</p>
+                
+                       
+                </div>
+            </div>
+           
+            <div class="certificate">
+                <img src="image/cerf.png" class="ricon">
+                <h2 style="margin-top: -40px; margin-left: 80px;">Certificate:</h3> <hr>
+               </div>
+            <br><br>
+
+            <div class="skill">
+                <img src="image/skill.png" class="ricon">
+                <h2 style="margin-top: -40px; margin-left: 80px;">Other Skills:</h3> <hr>
+               </div>
+               <div class="edu">
+                <div class="leftedu" style="margin-top: -15px;">
+                    <p>Programming Languages</p>
+                    <p>Languages</p><br>
+                   
+                </div>
+                <div class="rightedu">
+                    
+                    <p>JAVA, J2EE, HTML, CSS, DBMS, Android</p>
+                    <p>English(intermediate level)</p>
+                </div>
+            </div>
+           
+            </div>
+        </div>
+    </body>
+</html>
