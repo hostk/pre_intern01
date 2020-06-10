@@ -8,28 +8,60 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <style>
-     .material-icons.md-18 { font-size: 18px; } .material-icons.md-24 { font-size: 24px; } .material-icons.md-36 { font-size: 36px; } .material-icons.md-48 { font-size: 48px; }
+       nav{
+         padding: 50px;
+       }
+     .material-icons.md-18 { font-size: 18px; } .material-icons.md-24 { font-size: 24px; } .material-icons.md-36 { font-size: 36px; } .material-icons.md-48 { font-size: 48px; } .material-icons.md-78{font-size: 78px;}
+     li{
+       text-align: center;
+       margin-left: 60px;
+     }
+     .mainbody{
+       text-align: center;
+       margin-top: 50px;
+     }
+     .test{
+       margin-top: 40px;
+       text-align: center;
+       margin-left: 70px;
+       margin-right: 70px;
+     }
+     .footer{
+       background-color: rgb(56, 228, 56);
+       padding: 50px;
+     }
+     .f1{
+       margin-top: -40px;
+     }
      </style>
  </head>
  <body>
   <nav class="navbar navbar-expanded-lg navbar-light bg-light">
-   <a class="navbar-brand" href="#">Holiday Homes</a>
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-     <li class="nav-item active">
-    <a class="nav-link" href="#">Home<span class="sra-only"></span></a></li>
-      <li class="nav-item">
-    <a class="nav-link" href="#">ABOUT US<span class="sra-only"></span></a></li>
-     <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a></li>
-     <li class="nav-item">
-    <a class="nav-link" href="#">GALLERY<span class="sra-only"></span></a></li>
-    <a class="nav-link" href="#">CONTACTS<span class="sra-only"></span></a></li>
-    </ul>
+    <div class="row">
+      <div class="col-sm">
+        <a class="navbar-brand" href="#">Holiday Homes</a>
+      </div>
+      <div class="row-sm">
+          <div class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sra-only"></span></a></div></div>
+      <div class="col-sm">      
+          <div class="nav-item">
+            <a class="nav-link" href="#">ABOUT US<span class="sra-only"></span></a></div></div>
+      <div class="col-sm">      
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICES</a></div></div>
+      <div class="col-sm">      
+          <div class="nav-item">
+            <a class="nav-link" href="#">GALLERY<span class="sra-only"></span></a></div></div>
+            <div class="col-sm">      
+              <div class="nav-item">
+            <a class="nav-link" href="#">CONTACTS<span class="sra-only"></span></a></div></div>
+      <div class="col-sm">      
+        <div class="nav-item">    
     <form class="form-inline my-2 my-lg-0">
      <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
-   </form>
+   </form></div></div>
+   </div>
   </nav>
   <div id="carouselInterval" class="carousel slide" data-ride="carousel">
    <div class="carousel-inner">
@@ -42,83 +74,157 @@
    </div>
   <a class="carousel-control-prev" href="#carouselInterval" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselInterval" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
   </div>
-     <ul class="nav" style="text-align:center; margin-left:100px;">
+     <ul class="nav" style="text-align:center; margin-left:50px;">
     <li class="nav-item">
-       <i class="material-icons md-48">vpn_key</i>
+       <i class="material-icons md-78">vpn_key</i>
     <a class="nav-link" href="#">Rent direct from owner</a></li>
      <li class="nav-item">
-        <i class="material-icons md-48">money</i>
+        <i class="material-icons md-78">money</i>
     <a class="nav-link" href="#">No Commission</a></li>
      <li class="nav-item">
-        <i class="material-icons md-48">date_range</i>
-    <a class="nav-link">Flexial and rental dates</a></li>
+        <i class="material-icons md-78">date_range</i>
+    <a class="nav-link" href="#">Flexial and rental dates</a></li>
      <li class="nav-item">
-        <i class="material-icons md-48">visibility_off</i>
-    <a class="nav-link">Flexial and rental dates</a></li>
+        <i class="material-icons md-78">visibility_off</i>
+    <a class="nav-link" href="#">Flexial and rental dates</a></li>
     </ul>
     <div class="container">
+      <div class="mainbody">
      <h1>TOP HOLIDAYS DESTINATIONS</h1>
-     <div class="card text-center">
+     <div class="card" style="display: flex; flex-wrap: wrap;">
        <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs text-center">
-          <li class="nav-item nav-success">
-            <a href="#" class="nav-link active">Omaha Beach</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link active" id="card1">Omaha Beach</a>
           </li>
-          <li class="nav-item nav-success">
-            <a href="#" class="nav-link active">Lake Wanaka</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="card2">Lake Wanaka</a>
           </li>
-          <li class="nav-item nav-success">
-            <a href="#" class="nav-link active">Mangawhai Heads</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="card3">Mangawhai Heads</a>
           </li>
-          <li class="nav-item nav-success">
-            <a href="#" class="nav-link active">Taupo Central</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link" id="card4">Taupo Central</a>
           </li>
           </ul>
        </div>
      </div>
-     <div class="card" >
-       <img src="image/A.jpg" class="card-img-top" style="width:200px; height:auto;">
-       <div class="card-body">
-       fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
+     <div class="row row-cols-1 row-cols-md-3" data-target="#card1">
+       <div class="col mb-4">
+          <div class="card">
+            <img src="image/A.jpg" class="card-img-top w-100" style="width:200px; height:auto;">
+            <div class="card-body">
+              fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
+            </div>
+          </div>
        </div>
-     </div>
+      <div class="col mb-4"> 
       <div class="card" >
-       <img src="image/A.jpg" class="card-img-top" style="width:200px; height:auto;">
-       <div class="card-body">
-       fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
-       </div>
-      </div>
-      <div class="card" >
-       <img src="image/A.jpg" class="card-img-top" style="width:200px; height:auto;">
-       <div class="card-body">
-       fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
-       </div>
-      </div>
-      <div class="card" >
-       <img src="image/A.jpg" class="card-img-top" style="width:200px; height:auto;">
+       <img src="image/A.jpg" class="card-img-top w-100" style="width:200px; height:auto;">
        <div class="card-body">
        fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
        </div>
       </div>
+      </div>
+      <div class="col mb-4">
       <div class="card" >
-       <img src="image/A.jpg" class="card-img-top" style="width:200px; height:auto;">
+       <img src="image/A.jpg" class="card-img-top w-100" style="width:200px; height:auto;">
        <div class="card-body">
        fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
        </div>
       </div>
-      <div class="card" >
-       <img src="image/A.jpg" class="card-img-top" style="width:200px; height:auto;">
-       <div class="card-body">
-       fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
-       </div>
       </div>
+     <div class="col mb-4">
       <div class="card" >
-       <img src="image/A.jpg" class="card-img-top" style="width:200px; height:auto;">
+       <img src="image/A.jpg" class="card-img-top w-100" style="width:200px; height:auto;">
        <div class="card-body">
        fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
        </div>
       </div>
      </div>
+      <div class="col mb-4">
+      <div class="card" >
+       <img src="image/A.jpg" class="card-img-top w-100" style="width:200px; height:auto;">
+       <div class="card-body">
+       fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
+       </div>
+      </div>
+      </div>
+      <div class="col mb-4">
+      <div class="card" >
+       <img src="image/A.jpg" class="card-img-top w-100" style="width:200px; height:auto;">
+       <div class="card-body">
+       fydhg fudjbg fgffkv dygfj syhcv fhfnv dhvcb 
+       </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+    <div class="test">
+      <h2>TESTIMONIALS</h2>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4">
+          <img src="image/B.jpg" class="rounded-circle" style="width: 100px; height: auto;">
+          <p style="text-align: left;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim cumque consequatur quibusdam modi eum itaque. Fugiat laudantium, obcaecati voluptate voluptatum ea, rem impedit quaerat expedita blanditiis at ut nostrum vero.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="image/B.jpg" class="rounded-circle" style="width: 100px; height: auto;">
+          <p style="text-align: left;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum voluptatum voluptas debitis. Aliquam vel cumque officia eaque doloribus harum dolor blanditiis sit aliquid? Nobis distinctio numquam qui itaque, praesentium asperiores!</p>
+        </div>
+        <div class="col-md-4">
+          <img src="image/B.jpg" class="rounded-circle" style="width: 100px; height: auto;">
+          <p style="text-align: left;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam vel perspiciatis accusantium expedita numquam sint veniam eius ullam? Cupiditate quia rem ipsa nesciunt? Accusantium nobis a quis eaque rerum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>ABOUT</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit sed omnis incidunt dolor velit molestias dolores tempore est vel possimus, assumenda temporibus nemo accusantium perferendis ratione repudiandae cumque beatae. Possimus.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>USEFUL ADVICE</h3>
+          <h6>LAW SUPPORT</h6>
+          <h6>INSURANCE</h6>
+          <h6>PARTY DECORATION</h6>
+          <h6>PARTNERS PROGRAM</h6>
+        </div>
+        <div class="col-md-4">
+          <h3>GET IN TOUCH</h3>
+          <div class="form-group" style="padding-top: 20px;">
+            <input type="text" placeholder="Name" class="form-control"><br>
+            <input type="email" placeholder="Email" class="form-control"><br>
+            <textarea class="form-control" rows="3"></textarea><br>
+            <button class="btn btn-danger form-control">SEND MESSAGE</button>
+          </div>
+        </div>
+      </div>
+      <div class="f1">
+      <div class="row">
+        <div class="col-md-4">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, recusandae expedita ea culpa fugit molestiae. In eligendi nulla eaque, cupiditate dicta aliquam minima ipsa ad dolor, natus laboriosam maxime neque?</p>
+
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col">
+              <img src="image/facebook.svg">
+            </div>
+            <div class="col">
+              <img src="image/instagram.svg">
+            </div>
+            <div class="col">
+              <img src="image/twitter.svg">
+            </div>
+            <div class="col">
+              <img src="image/rss.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
  </body>
 </html>
