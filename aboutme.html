@@ -6,26 +6,44 @@
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
         <style>
-            
             body{
-                background-color: lightgray;
+                background-color: rgb(206, 199, 199);
             }
             .section1{
                 position: fixed;
                 width: 25%;
                 height: 100%;
-                background-color: lightgray;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+            .scroll{
+                padding: 20px;
             }
             .div1{
+                clear: both;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
                 width: 100%;
-                height: 20px;
-                background-color: white;
+                height: auto;
+                background-color:whitesmoke;
+                position: relative;
+            }
+            .div2{
+                text-align: center;
+                clear: both;
+                padding: 10px;
+                margin: 10px;
+                width: 100%;
+                height: auto;
+                background-color: whitesmoke;
                 position: relative;
             }
             .section2{
                 width: 72%;
                 height: 100%;
                 float: right;
+                padding: 10px;
                 position: relative;
             }
             header{
@@ -34,9 +52,10 @@
                 margin-right: 10px;
             }
             ul{
+                padding-left: 100px;
                 list-style-type: none;
                 overflow: hidden;
-                background-color: white;
+                background-color:whitesmoke;
             }
             li{
                 float: left;
@@ -57,19 +76,28 @@
                 background-color: royalblue;
             }
             .contentIntro{
-                clear: right;
-                background-color: white;
+                clear: both;
+                background-color: whitesmoke;
                 margin-right: 10px;
                 width: 100%;
-                height: 350px;
+                height: 310px;
                 position: relative;
             }
             
             .intro{
                 float: left;
-                height: 100%;
+                height: auto;
                 width: 50%;
                 margin: 20px 20px 20px 20px;
+            }
+            .myphoto{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: red;
+                position: absolute;
+                margin-left: 400px;
+                margin-top: 40px;
             }
             .image{
                 float:right;
@@ -84,16 +112,17 @@
                 position: absolute;
             }
             .maincontent{
-                background-color:white;
+                clear: both;
+                background-color:whitesmoke;
                 width: 95%;
                 height: 600px;
-                margin-top: 20px;
+                margin-top: 10px;
                 position: relative;
                 padding: 20px;
             }
             .cardlist{
                 float: left;
-                width: 48%;
+                width: 50%;
                 position: relative;
             }
             .cards{
@@ -108,6 +137,7 @@
                 text-align: center;
                 padding: 10px;
                 margin: 10px;
+                background-color: white;
             }
             .h4{
                 margin-top: -20px;
@@ -115,7 +145,7 @@
             .form{
                 float: right;
                 position: relative;
-                width: 45%;
+                width: 50%;
                 font-size: 18px;
             }
             .tab{
@@ -125,11 +155,24 @@
     </head>
     <body>
         <section class="section1">
+            <div class="scroll">
             <div class="div1">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia totam, facilis est consequatur tempora officiis vitae architecto, provident nemo magni deleniti? Quos eligendi, sunt fugiat ullam distinctio accusantium facere odio.</p>
+                <img src="image2/p2.jpg" width="200px" height="200">
+                <h1>Min Ko Ko</h1>
+                <p style="margin-top: -10px;"><span style="color: blue; font-size: 18px;">UI/UX Designer</span> in Myanmar</p>
+            </div>
+            <div class="div2">
+                <div class="iconList">
+                    <i class="fab fa-instagram" style="color: red;"></i>
+                    <i class="fab fa-twitter" style="color: blue; margin-left: 10px;"></i>
+                    <i class="fab fa-facebook" style="color: blue; margin-left: 10px;"></i>
                 </div>
+                <h3>WHAT'S IN MY MINO</h3>
+                <p>We can develop and design beyond your imagation. About your work,I don't</p>
+            </div>
+            </div>
+            <!--Scroll close-->
         </section>
-
 <!--section1 close-->
         <section class="section2">
         <header>
@@ -139,22 +182,33 @@
                         <a href="#" class="active">Home</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#">About</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#">Skill</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#">Education</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#">Protfolio</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#">Testmical</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#">Enterprise</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <form style="margin-top: 15px; margin-left: 10px;">
+                            <i class="fas fa-search"></i>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -169,12 +223,12 @@
                 <p style="font-size: larger; margin-top: -30px;">My name is Min Ko Ko</p> 
                 <p style="margin-top: -10px;">&amp;I am abslute design addicted</p><br>
                 <button type="submit" value="submit" style="background-color:blue; width: 150px; height: 40px; margin-top: 10px;"><i class="fab fa-image"></i>View Protfolio</button>
+                </div>
+                    <img src="image2/p2.jpg" class="img">
+                    <div class="myphoto">
+                        <i class="far fa-comment-dots" style="color:white; position: absolute; margin-top: 20px; margin-left: 20px; width: 40px;"></i>
+                     </div>
             </div>
-            <div class="myphoto">
-                <img src="image2/p1.jpg" class="img">
-                <i class="far fa-comment-dots" style="float: left; background-color: red; width: 50px; height: 50px;"></i>
-            </div>
-        </div>
         <!--contentIntro Close-->
 
         <div class="maincontent">
