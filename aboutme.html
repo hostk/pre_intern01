@@ -151,29 +151,56 @@
             .tab{
                 tab-size: 16px;
             }
+            @media only screen and (max-width: 600px){
+                
+                .cards,.cardlist,.form{
+                    width: 100%;
+                    height: auto;
+                }
+                .maincontent{
+                    width: 93%;
+                    height: 900px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
+                .section1{
+                    overflow: hidden;
+                    width: 100%;
+                    height: auto; 
+                    margin:0px 50px -10px -10px;  
+                    position: relative;
+                }  
+                ul{
+                    padding-left: 20px;
+                    margin:0px -15px 10px 5px;
+                }
+                
+                .section2{
+                    width: 100%;
+                }
+                .contentIntro{
+                    margin-left: 12px;
+                }
+                .div1,.div2{
+                    margin: 0px 0px 0px 0px;
+                    padding: 0px 0px 0px 0px;
+                    height: auto;
+                }
+                .myphoto{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: red;
+                position: absolute;
+                margin-left: 300px;
+                margin-top: 40px;
+            }
+            }
         </style>
     </head>
     <body>
-        <section class="section1">
-            <div class="scroll">
-            <div class="div1">
-                <img src="image2/p2.jpg" width="200px" height="200">
-                <h1>Min Ko Ko</h1>
-                <p style="margin-top: -10px;"><span style="color: blue; font-size: 18px;">UI/UX Designer</span> in Myanmar</p>
-            </div>
-            <div class="div2">
-                <div class="iconList">
-                    <i class="fab fa-instagram" style="color: red;"></i>
-                    <i class="fab fa-twitter" style="color: blue; margin-left: 10px;"></i>
-                    <i class="fab fa-facebook" style="color: blue; margin-left: 10px;"></i>
-                </div>
-                <h3>WHAT'S IN MY MINO</h3>
-                <p>We can develop and design beyond your imagation. About your work,I don't</p>
-            </div>
-            </div>
-            <!--Scroll close-->
-        </section>
-<!--section1 close-->
+       
         <section class="section2">
         <header>
             <div class="navbar">
@@ -275,5 +302,26 @@
         <!--maincontent close-->
     </section>
     <!--section 2 close-->
+
+    <section class="section1">
+        <div class="scroll">
+        <div class="div1">
+            <img src="image2/p2.jpg" width="200px" height="200">
+            <h1>Min Ko Ko</h1>
+            <p style="margin-top: -10px;"><span style="color: blue; font-size: 18px;">UI/UX Designer</span> in Myanmar</p>
+        </div>
+        <div class="div2">
+            <div class="iconList">
+                <i class="fab fa-instagram" style="color: red;"></i>
+                <i class="fab fa-twitter" style="color: blue; margin-left: 10px;"></i>
+                <i class="fab fa-facebook" style="color: blue; margin-left: 10px;"></i>
+            </div>
+            <h3>WHAT'S IN MY MINO</h3>
+            <p>We can develop and design beyond your imagation. About your work,I don't</p>
+        </div>
+        </div>
+        <!--Scroll close-->
+    </section>
+<!--section1 close-->
     </body>
 </html>
