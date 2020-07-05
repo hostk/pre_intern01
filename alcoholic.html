@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alcoholic Online Store</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <style>
+            header{
+                width: 100%;
+                height: 20px;
+                background-color: rgb(167, 161, 161);
+            }
+            .title{
+                width: 20%;
+            }
+            .titleLogo{
+                width: 120px;
+                height: 70px;
+                float: left;
+            }
+            .searchform{
+                text-align: center  ;
+                position: relative;
+                padding-top: 30px;
+            }
+            nav{
+                clear: both;
+                background-color: black;
+                height: 40px;
+                padding-left: 50px;
+                padding-top: 20px;
+
+            }
+            nav a{
+                list-style-type: none;
+                color: white;
+                padding-left: 30px;
+            }
+            .section1{
+                width: 100%;
+                height: 20%;
+            }
+            .logo{
+                margin-top: 10px;
+                width: 100%;
+                height: 300px;
+            }
+            .section2{
+                text-align: center;
+                width: 100%;
+                height: 250px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .card{
+                width: 265px;
+                height: 230px;
+            }
+            .imageTitle{
+                width: 260px;
+                height: 30px;
+                background-color: black;
+                color: white;
+                margin-top: -5px;
+                text-align: center;
+                margin-left: 2px;
+            }
+            .image{
+                width: 260px;
+                height: 200px;
+                padding-top:10px;
+            }
+            .navsection{
+                margin-top: 10px;
+                background-color: rgb(173, 167, 167);
+                width: 100%;
+                height: 30px;
+                }
+            ul{
+                text-align: center;
+                margin-top: -10px;
+                width: auto;
+                background-color: rgb(173, 167, 167);
+                list-style-type: none;           
+                 }
+            li{
+                float: left;
+            }
+            li a{
+                color: black;
+                text-decoration: none;
+            }
+            .active{
+                background-color: lightgray;
+                color: black;
+            }
+            .cards{
+                clear: both;
+                text-align: center;
+                margin-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 600px;
+            }
+            .card2{
+                margin-top: 10px;
+                margin-left: 10px;
+                width: 150px;
+                height: 320px;
+            }
+            .imgs{
+                width: 100px;
+                height: 230px;
+            }
+            .cartbtn{
+                background-color: red;
+                color: white;
+                border: none;
+                width: 150px;
+                height: 30px;
+                margin-left: 10px;
+            }
+            .contact{
+                width: 80%;
+                margin-left: 30px;
+                margin-top: 70px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .fbsection{
+                width: 40%;
+                height: 300px;
+            }
+            .contactlist{
+                padding-left: 10px;
+                width: 30%;
+                height: auto;
+                position: relative;
+            }
+            .classroom{
+                padding-left: 10px;
+                width: 25%;
+                height: auto;
+                position: relative;
+            }
+            footer{
+                width: 100%;
+                height: 400px;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+        </header>
+        <div class="titlecontent">
+            <div class="title">
+                <img src="alcoholic/title.png" alt="Logo" class="titleLogo">
+            </div>
+            <form class="searchform">
+                <input type="search" name="search" placeholder="search"><i class="fas fa-search" style="margin-left: -20px;"></i>
+                <label name="call" style="margin-left: 110px; font-size: 20px; font-style: bold;">Call Us Now  +(95) 09 977 264 873</label>
+            </form>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Home</a>
+
+            <a href="#">Home</a>
+
+            <a href="#">Home</a>
+
+        </nav>
+            <section class="section1">
+                <img src="alcoholic/logo.png" class="logo">
+            </section>
+            <!--Section1 close-->
+            <section class="section2">
+                <div class="card">
+                <img src="alcoholic/logo.png" class="image">
+                <p class="imageTitle">Min Ko Ko</p>
+                </div>
+                <div class="card">
+                    <img src="alcoholic/logo.png" class="image">
+                    <p class="imageTitle">Min Ko Ko</p>
+                    </div>
+                <div class="card">
+                    <img src="alcoholic/logo.png" class="image">
+                    <p class="imageTitle">Min Ko Ko</p>
+                </div>
+                <div class="card"> 
+                   <img src="alcoholic/logo.png" class="image">
+                    <p class="imageTitle">Min Ko Ko</p>
+                </div>
+            </section>
+            <!--section2 close-->
+            <section class="section3">
+                <nav class="navsection">
+                    <ul>
+                        <li>
+                            <a href="#" class="active" id="active">Whisky</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link" id="beeer">Beer</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link" id="drum">Drum</a>
+                        </li>
+                    </ul>
+                </nav>    
+                    <div class="cards">
+                        <div class="card2">
+                            <img src="alcoholic/w1.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w2.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w3.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w4.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w5.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w6.jpeg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w6.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w8.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w9.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w10.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w11.png" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                        <div class="card2">
+                            <img src="alcoholic/w12.jpg" class="imgs">
+                            <p>27000$</p>
+                            <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
+                        </div>
+                    </div>
+            </section>
+            <!--Section3 close-->
+            <div class="contact">
+                <div class="fbsection">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2FBritishCouncilMyanmar%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" scrolling="true" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div>
+                <div class="contactlist">
+                    <p><i class="fas fa-message"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
+                </div>
+                <div class="classroom">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum accusantium quaerat porro non magnam rerum. Atque distinctio, autem eum accusantium facilis ipsum architecto nihil aliquam, incidunt illo sequi magni?</p>
+                </div>
+            </div>
+        <footer>
+            <h1 style="font-size: 48px; color: white;">ALCOHOLICS</h1>
+        </footer>
+    </body>
+</html>
