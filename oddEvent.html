@@ -8,11 +8,9 @@
         <form id="form">
         <input type="text" id="fname" name="firstNumber" placeholder="enter the large number"><br>
         <input type="text" id="sname" name="secondNumber" placeholder="enter the small number"><br>
-        <label name="odd" id="odd"></label><br>
-        <label name="event" id="event"></label><br>
+        <button type="submit" id="showBtn">Show</button>       
+            
         </form>
-        <button type="submit" id="showBtn">Show</button>
-        <button type="submit" onclick="reset()">Clear</button><br>
         <script>
         var odd="";
         var event="";    
@@ -26,19 +24,16 @@
                     j=i;
                 
                     if(j%2==0){
-                        event+=j;
+                        event=j;
+                        document.write("Event Number is : "+event);
+                        document.write("<br>");
                     }else{
-                        odd+=j;
+                        odd=j;
+                        document.write("Odd Number is : "+odd);
+                        document.write("<br>");
                     }
-                    document.getElementById("event").innerHTML=event+" ";
-                    document.getElementById("odd").innerHTML=odd;
                 }
             });
-            function reset(){
-                document.getElementById("form").reset();
-                document.getElementById("odd").innerHTML=" ";
-                document.getElementById("event").innerHTML=" ";
-            }
         </script>
     </body>
 </html>
