@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Execises</title>
+        
+    </head>
+    <body>
+        <h3 id="result"></h3>
+        <input type="text" id="fname" name="firstNumber" placeholder="enter the large number">
+        <input type="text" id="sname" name="secondNumber" placeholder="enter the small number">
+        <br>
+        <button type="submit" onclick="addBtn()">+</button>
+        <button type="submit" onclick="subBtn()">-</button>
+        <button type="submit" onclick="multBtn()">*</button>
+        <button type="submit" onclick="divBtn()">/</button>
+        <script>
+        var text=0;
+
+                function addBtn(){
+                var first=document.getElementById("fname").value;
+                var second=document.getElementById("sname").value;
+                var fname=parseInt(first);
+                var sname=parseInt(second);
+                text =fname+sname;
+                document.getElementById("result").innerHTML=text;
+                }
+                function subBtn(){
+                var first=document.getElementById("fname").value;
+                var second=document.getElementById("sname").value;
+                var fname=parseInt(first);
+                var sname=parseInt(second);
+                text =fname-sname;
+                document.getElementById("result").innerHTML=text;
+                }
+                function multBtn(){
+                var first=document.getElementById("fname").value;
+                var second=document.getElementById("sname").value;
+                var fname=parseInt(first);
+                var sname=parseInt(second);
+                text =fname*sname;
+                document.getElementById("result").innerHTML=text;
+                }
+                function divBtn(){
+                var first=document.getElementById("fname").value;
+                var second=document.getElementById("sname").value;
+                var fname=parseInt(first);
+                var sname=parseInt(second);
+                text =fname/sname;
+                document.getElementById("result").innerHTML=text;
+                }
+        </script>
+    </body>
+</html>
