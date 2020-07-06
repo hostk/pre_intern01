@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Execises</title>
+        
+    </head>
+    <body>
+        <input type="text" id="fname" name="firstNumber" placeholder="enter the large number">
+        <input type="text" id="sname" name="secondNumber" placeholder="enter the small number">
+        <button type="submit" id="showBtn">Show</button>
+        <p id="text"></p>
+        <script>
+        var text="";
+
+            document.getElementById("showBtn").addEventListener("click", function(){
+                var first=document.getElementById("fname").value;
+                var second=document.getElementById("sname").value;
+                var fname=parseInt(first);
+                var sname=parseInt(second);
+                var i=0,j=0;
+                for(i=fname;i<sname;i++){
+                    j=i;
+                
+                    if(j%2==0 && j%5==0){
+                        text+=i;
+                    }
+                    document.getElementById("text").innerHTML=text+"<br>";
+
+                }
+            });
+        </script>
+    </body>
+</html>
