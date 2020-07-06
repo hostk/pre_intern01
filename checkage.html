@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Date Check Execises</title>
+        
+    </head>
+    <body>
+        <input type="date" id="date" name="date">
+        <button type="submit" onclick="checkBtn()">Check</button>
+        <script>
+            function checkBtn(){
+                var date = document.getElementById("date");
+                var d= new Date(date.value);
+                var d2=new Date(2001,08,03);
+                if(d<d2){
+                    alert("This is greater than 18 year");
+                }else{
+                    alert("This is less than 18 year.");
+                }
+                
+            }
+        </script>
+    </body>
+</html>
