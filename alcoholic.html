@@ -72,15 +72,17 @@
             .navsection{
                 margin-top: 10px;
                 background-color: rgb(173, 167, 167);
-                width: 100%;
+                width: 95%;
                 height: 30px;
+                overflow: hidden;
                 }
             ul{
                 text-align: center;
                 margin-top: -10px;
                 width: auto;
                 background-color: rgb(173, 167, 167);
-                list-style-type: none;           
+                list-style-type: none; 
+                overflow: hidden;          
                  }
             li{
                 float: left;
@@ -101,6 +103,7 @@
                 flex-wrap: wrap;
                 width: 100%;
                 height: 600px;
+                overflow: hidden;
             }
             .card2{
                 margin-top: 10px;
@@ -121,7 +124,7 @@
                 margin-left: 10px;
             }
             .contact{
-                width: 80%;
+                width: 90%;
                 margin-left: 30px;
                 margin-top: 70px;
                 display: flex;
@@ -130,23 +133,34 @@
             .fbsection{
                 width: 40%;
                 height: 300px;
+                border: 1px solid black;
             }
             .contactlist{
                 padding-left: 10px;
                 width: 30%;
                 height: auto;
                 position: relative;
+                border: 1px solid black;
             }
             .classroom{
                 padding-left: 10px;
                 width: 25%;
                 height: auto;
                 position: relative;
+                border: 1px solid black;
+                padding: 10px;
             }
             footer{
                 width: 100%;
                 height: 400px;
                 background-color: black;
+            }
+            p{
+                text-align: justify;
+            }
+            .footertitle{
+                margin-top: 20px;
+                margin-left: 10px;
             }
         </style>
     </head>
@@ -275,17 +289,24 @@
             <!--Section3 close-->
             <div class="contact">
                 <div class="fbsection">
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2FBritishCouncilMyanmar%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" scrolling="true" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2FBritishCouncilMyanmar%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="300" scrolling="true" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </div>
                 <div class="contactlist">
-                    <p><i class="fas fa-message"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
+                    <p><i class="fas fa-car"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
+                    <p><i class="far fa-window-maximize"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
+                    <p><i class="fas fa-phone"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
                 </div>
                 <div class="classroom">
+                    <h3>Customer Block</h3>
+                    <h4>Lorem ipsum dolor sit</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse earum accusantium quaerat porro non magnam rerum. Atque distinctio, autem eum accusantium facilis ipsum architecto nihil aliquam, incidunt illo sequi magni?</p>
                 </div>
             </div>
         <footer>
-            <h1 style="font-size: 48px; color: white;">ALCOHOLICS</h1>
+            <div class="footertitle">
+                <h1 style="font-size: 48px; color: white; margin-top: 20px; margin-left: 20px;">ALCOHOLICS</h1>
+                <h1 style="font-size: 32px; color: white; margin-top: -40px; margin-left: 40px;">BEVERAGE STORE</h1>
+            </div>
         </footer>
     </body>
 </html>
