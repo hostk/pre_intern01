@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task List Execises</title>
+        <style>
+            form{
+                margin-top: 40px;
+                margin-left: 30px;
+            }
+            h3{ margin-left: 30px;
+                margin-bottom: -10px;
+            }
+            #list{
+                text-align: left;
+                list-style-type: none;
+                margin-left: 30px;
+            }
+            ul li{
+                font-size: 20px;
+                padding: 10px;
+                width: 200px;
+            }
+            button{
+                margin-right: 10px;
+                margin-left: 40px;
+                border-radius: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label name="taskname">Task Name: </label><input type="text" name="task" id="tasktext" placeholder="Task">
+            <button type="button" onclick="addTask()">Add Task</button>
+        </form>
+        <h3>Task List</h3>
+        <ul id="list">
+
+        </ul>
+        <script>
+            function addTask(){
+                var task=document.getElementById("tasktext");
+                var list= document.getElementById("list");
+                var createtask= document.createElement("li");
+                var createBtn=document.createElement("button");
+                createBtn.innerHTML="DELETE";
+                createBtn.addEventListener("click",function(){
+                    list.removeChild(createtask);
+                });
+                var node=document.createTextNode(task.value);
+                createtask.appendChild(node);
+                createtask.appendChild(createBtn);
+                list.appendChild(createtask);
+                task.value.innerHTML=" ";
+                
+            }
+        </script>
+    </body>
+</html>
