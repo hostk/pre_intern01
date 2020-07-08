@@ -16,23 +16,26 @@
                 width: 120px;
                 height: 70px;
                 float: left;
+                padding-left: 20px;
             }
             .searchform{
                 text-align: center  ;
                 position: relative;
                 padding-top: 30px;
             }
-            nav{
+            .nav{
                 clear: both;
                 background-color: black;
-                height: 40px;
-                padding-left: 50px;
-                padding-top: 20px;
-
+                height: auto;
+                width: 97%; 
+                padding: 10px;               
             }
             nav a{
-                list-style-type: none;
+                text-align: center;
+                text-decoration: none;
                 color: white;
+                padding-top: 10px;
+                margin-top: 20px;
                 padding-left: 30px;
             }
             .section1{
@@ -45,9 +48,8 @@
                 height: 300px;
             }
             .section2{
-                text-align: center;
                 width: 100%;
-                height: 250px;
+                height: auto;
                 display: flex;
                 flex-wrap: wrap;
             }
@@ -56,36 +58,35 @@
                 height: 230px;
             }
             .imageTitle{
-                width: 260px;
+                width: 250px;
                 height: 30px;
+                font-size: 28px;
+                font-style: bold;
                 background-color: black;
                 color: white;
                 margin-top: -5px;
-                text-align: center;
-                margin-left: 2px;
             }
             .image{
-                width: 260px;
+                width: 250px;
                 height: 200px;
-                padding-top:10px;
+                padding-top:20px;
             }
             .navsection{
-                margin-top: 10px;
+                margin-top: 30px;
                 background-color: rgb(173, 167, 167);
-                width: 95%;
-                height: 30px;
-                overflow: hidden;
+                width: 100%;
+                height: 50px;
+                padding-top: 10px;
                 }
             ul{
                 text-align: center;
-                margin-top: -10px;
-                width: auto;
                 background-color: rgb(173, 167, 167);
-                list-style-type: none; 
-                overflow: hidden;          
+                list-style-type: none;        
                  }
             li{
                 float: left;
+                margin-left: 20px;
+                list-style-type: none;
             }
             li a{
                 color: black;
@@ -96,20 +97,21 @@
                 color: black;
             }
             .cards{
-                clear: both;
                 text-align: center;
-                margin-top: 30px;
+                margin-top: 10px;
                 display: flex;
                 flex-wrap: wrap;
-                width: 100%;
-                height: 600px;
-                overflow: hidden;
+                width: 100%;            <a href="#">WINE</a>
+
             }
             .card2{
+                position: relative;
                 margin-top: 10px;
                 margin-left: 10px;
+                margin-right: 10px;
                 width: 150px;
-                height: 320px;
+                height: auto;
+                border: 1px solid gray;
             }
             .imgs{
                 width: 100px;
@@ -121,29 +123,41 @@
                 border: none;
                 width: 150px;
                 height: 30px;
-                margin-left: 10px;
             }
             .contact{
                 width: 90%;
-                margin-left: 30px;
-                margin-top: 70px;
+                height: auto;
+                margin-left: 10px;
+                margin-top: 20px;
                 display: flex;
                 flex-wrap: wrap;
             }
             .fbsection{
-                width: 40%;
+                width: 32%;
                 height: 300px;
                 border: 1px solid black;
             }
+            .icon{
+                float: left;
+                width: 5%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
             .contactlist{
                 padding-left: 10px;
-                width: 30%;
+                width: 35%;
                 height: auto;
                 position: relative;
                 border: 1px solid black;
             }
+            .listpage{
+                width: 300px;
+                position: relative;
+                float: right;
+            }
             .classroom{
-                padding-left: 10px;
+                padding-left: 20px;
                 width: 25%;
                 height: auto;
                 position: relative;
@@ -151,8 +165,10 @@
                 padding: 10px;
             }
             footer{
+                display: flex;
+                flex-wrap: wrap;
                 width: 100%;
-                height: 400px;
+                height: auto;
                 background-color: black;
             }
             p{
@@ -161,6 +177,22 @@
             .footertitle{
                 margin-top: 20px;
                 margin-left: 10px;
+            }
+            .information{
+                margin-left: 200px;
+                width: 20%;
+                position: relative;
+            }
+            ul{
+                margin-left: -40px;
+                color: white;
+                text-align: left;
+            }
+            .account{
+                font-size: 16px;
+                position: relative;
+                margin-left: 40px;
+                width: 20%;
             }
         </style>
     </head>
@@ -177,14 +209,17 @@
             </form>
         </div>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-
-            <a href="#">Home</a>
-
-            <a href="#">Home</a>
-
+        <nav class="nav">
+            <a href="#">LIGUOR</a>
+            <a href="#">SPIRITS</a>
+            <a href="#">LIQUEURS</a>
+            <a href="#">WINE</a>
+            <a href="#">SINGLE MALT SCOTCH</a>
+            <a href="#">BOURBON</a>
+            <a href="#">WHISKEY</a>
+            <a href="#">TEQUILA</a>
+            <a href="#">VODKA</a>
+            <a href="#">RUM</a>
         </nav>
             <section class="section1">
                 <img src="alcoholic/logo.png" class="logo">
@@ -193,95 +228,108 @@
             <section class="section2">
                 <div class="card">
                 <img src="alcoholic/logo.png" class="image">
-                <p class="imageTitle">Min Ko Ko</p>
+                <p class="imageTitle">WHISKEY</p>
                 </div>
                 <div class="card">
                     <img src="alcoholic/logo.png" class="image">
-                    <p class="imageTitle">Min Ko Ko</p>
+                    <p class="imageTitle">TEQUILA</p>
                     </div>
                 <div class="card">
                     <img src="alcoholic/logo.png" class="image">
-                    <p class="imageTitle">Min Ko Ko</p>
+                    <p class="imageTitle">VODKA</p>
                 </div>
                 <div class="card"> 
                    <img src="alcoholic/logo.png" class="image">
-                    <p class="imageTitle">Min Ko Ko</p>
+                    <p class="imageTitle">WINE</p>
                 </div>
             </section>
             <!--section2 close-->
             <section class="section3">
-                <nav class="navsection">
-                    <ul>
+                <div class="navsection">
+                    <ul class=".ul">
                         <li>
-                            <a href="#" class="active" id="active">Whisky</a>
+                            <a href="#" class="active" id="active">NEW ARRIVALS</a>
                         </li>
                         <li>
-                            <a href="#" class="link" id="beeer">Beer</a>
+                            <a href="#" class="link" id="beeer">POPULAR</a>
                         </li>
                         <li>
-                            <a href="#" class="link" id="drum">Drum</a>
+                            <a href="#" class="link" id="drum">BEST SELLERS</a>
                         </li>
                     </ul>
-                </nav>    
+                </div>    
                     <div class="cards">
                         <div class="card2">
+                            <p style="float: left; margin-top: 5px; position: absolute; color: red; margin-left: 5px; font-style: bold;">-5%</p>
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><span style="background-color: red;color: white;">Sale!</span><br>NEW!</h4>                            
                             <img src="alcoholic/w1.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><span style="color: red;">$65.99</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><br>NEW!</h4>                            
                             <img src="alcoholic/w2.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
-                            <img src="alcoholic/w3.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p style="float: left; margin-top: 5px; position: absolute; color: red; margin-left: 5px; font-style: bold;">-8%</p>
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><span style="background-color: red;color: white;">Sale</span><br>NEW!</h4>                            <img src="alcoholic/w3.jpg" class="imgs">
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><span style="color: red;">$65.99</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><br>NEW!</h4>                           
                             <img src="alcoholic/w4.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><br>NEW!</h4>                                                       
                             <img src="alcoholic/w5.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><br>NEW!</h4>                           
                             <img src="alcoholic/w6.jpeg" class="imgs">
-                            <p>27000$</p>
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><br>NEW!</h4>                           
                             <img src="alcoholic/w6.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
-                            <img src="alcoholic/w8.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p style="float: left; margin-top: 5px; position: absolute; color: red; margin-left: 5px; font-style: bold;">-12%</p>
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><span style="background-color: red;color: white;">Sale</span><br>NEW!</h4>                            <img src="alcoholic/w8.jpg" class="imgs">
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><span style="color: red;">$65.99</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
-                            <img src="alcoholic/w9.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p style="float: left; margin-top: 5px; position: absolute; color: red; margin-left: 5px; font-style: bold;">-5%</p>
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><span style="background-color: red;color: white;">Sale</span><br>NEW!</h4>                            <img src="alcoholic/w9.jpg" class="imgs">
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><span style="color: red;">$65.99</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
-                            <img src="alcoholic/w10.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p style="float: left; margin-top: 5px; position: absolute; color: red; margin-left: 5px; font-style: bold;">-13%</p>
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><span style="background-color: red;color: white;">Sale</span><br>NEW!</h4>                            <img src="alcoholic/w10.jpg" class="imgs">
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><span style="color: red;">$65.99</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><br>NEW!</h4>                          
                             <img src="alcoholic/w11.png" class="imgs">
-                            <p>27000$</p>
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                         <div class="card2">
+                            <h4 style="position: absolute; margin-left: 100px;margin-top: 5px;"><br>NEW!</h4>                           
                             <img src="alcoholic/w12.jpg" class="imgs">
-                            <p>27000$</p>
+                            <p><span style="font-size: 28px; font-style: bold;">$62.89</span><br>miknffknv0ifovngui9v</p>
                             <button type="submit" name="submit" class="cartbtn">Add to Carts</button>
                         </div>
                     </div>
@@ -292,9 +340,16 @@
                     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2FBritishCouncilMyanmar%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="300" scrolling="true" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </div>
                 <div class="contactlist">
-                    <p><i class="fas fa-car"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
-                    <p><i class="far fa-window-maximize"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
-                    <p><i class="fas fa-phone"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
+                    <div class="icon">
+                        <i class="fas fa-car" style="margin-top: 50px; width: 40px; height: 50px; margin-left: 10px; margin-right: 10px;"></i>
+                        <i class="far fa-window-maximize" style="margin-top: 80px;width: 40px; height: 50px; margin-left: 10px; margin-right: 10px;"></i>
+                        <i class="fas fa-phone" style="margin-top: 50px; width: 80px; height: 50px; margin-left: 10px;"></i>
+                    </div>
+                    <div class="listpage">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officia voluptates doloribus aperiam consectetur, exercitationem omnis laboriosam adipisci assumenda ex, tempore officiis corporis necessitatibus alias? Sit necessitatibus maiores culpa id.</p>
+                    </div>
                 </div>
                 <div class="classroom">
                     <h3>Customer Block</h3>
@@ -306,6 +361,33 @@
             <div class="footertitle">
                 <h1 style="font-size: 48px; color: white; margin-top: 20px; margin-left: 20px;">ALCOHOLICS</h1>
                 <h1 style="font-size: 32px; color: white; margin-top: -40px; margin-left: 40px;">BEVERAGE STORE</h1>
+                <p style="color: rosybrown;">My Company,578 Marmora Road,Giasgow DD4 89GR</p>
+                <h2 style="color: white; margin-left: 20px;">CALL US NOW: (+959) 977264873</h2>
+                <p style="color: red; margin-left: 40px;">EMAIL:MINKOKO22696@GMAIL.COM</p>
+            </div>
+            <div class="information">
+                <h2 style="color: white;">INFORMATION</h2>
+                <ul class="informationlist">
+                    <li>SPECIALS</li>
+                    <li>NEW PRODUCTS</li>
+                    <li>BEST SELLERS</li>
+                    <li>OUR STORES</li>
+                    <li>CONTACT US</li>
+                    <li>PAGES CONFIGURATION</li>
+                    <li>SITE MAP</li>
+                </ul>
+            </div>
+            <div class="account">
+                <h2 style="color: white;">MY ACCOUNT</h2>
+                <ul class="accountlist">
+                    <li>MY ORDERS</li>
+                    <li>MY MERCHANDISE RETURNS</li>
+                    <li>MY CREDIT SLIPS</li>
+                    <li>MY ADDRESSES</li>
+                    <li>MY PERSONAL INFO</li>
+                    <li>MY VOUCHERS</li>
+                    <li>SIGN OUT</li>
+                </ul>
             </div>
         </footer>
     </body>
