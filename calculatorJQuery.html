@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Execises</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+        <script>
+            $(document).ready(function(){
+                
+            
+                $("#addBtn").click(function(){
+                    var num2=$("#sname").val();
+                    var num1=$("#fname").val();
+                    var result=parseInt(num1)+parseInt(num2);
+                    $("h3").text(result);
+                });
+                $("#subBtn").click(function(){
+                    var num2=$("#sname").val();
+                    var num1=$("#fname").val();
+                    var result=parseInt(num1)-parseInt(num2);
+                    $("h3").text(result);
+                });
+                $("#multBtn").click(function(){
+                    var num2=$("#sname").val();
+                    var num1=$("#fname").val();
+                    var result=parseInt(num1)*parseInt(num2);
+                    $("h3").text(result);
+                });
+                $("#divBtn").click(function(){
+                    var num2=$("#sname").val();
+                    var num1=$("#fname").val();
+                    var result=parseInt(num1)/parseInt(num2);
+                    $("h3").text(result);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h3 id="result"></h3>
+        <input type="text" id="fname" name="firstNumber" placeholder="enter the large number">
+        <input type="text" id="sname" name="secondNumber" placeholder="enter the small number">
+        <br>
+        <button type="submit" id="addBtn">+</button>
+        <button type="submit" id="subBtn">-</button>
+        <button type="submit" id="multBtn">*</button>
+        <button type="submit" id="divBtn">/</button>
+    </body>
+</html>
