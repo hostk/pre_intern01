@@ -80,30 +80,39 @@
         <script>
             $(document).ready(function(){
                 $("#calculate").click(function(){
-                   var budget= $("#budgetText").val();
-                   $("#bud").text(budget);
+                    var newBudget=$("#budgetInputField").val();
+                    var newB=parseInt(newBudget);
+                    var oldBudget=$("#budget").text();
+                    var oldB=parseInt(oldBudget);
+                    oldB+=newB;
+                    $("#budget").text(oldB);
+                    console.log(oldB);
+                    var oldBalance=$("#balance").text();
+                    var oldBal=parseInt(oldBalance);
+                    oldBal+=newB;
+                    $("#balance").text(oldBal);
+                    console.log(oldBal);
+
                 }); 
                 $("#addExpense").click(function(){
                     var ename=$("#expenseNameText").val();
-                    var expense=$("#expense").val();
+                    var newExpense=$("#expenseTextField").val();
+                    var newE=parseInt(newExpense);
+                    var oldExpense =$("#expense").text();
+                    var oldE=parseInt(oldExpense);
+                    oldE+=newE;
+                    var oldBalance=$("#balance").text();
+                    var oldBal=parseInt(oldBalance);
+                    oldBal-=newExpense;
+                    $("#balance").text(oldBal);
+                    console.log(oldE);
+                    $("#expense").text(oldE);
                     $("#expList").append(
                         "<tr>"
                             +"<td>"+ename+"</td>"
-                            +"<td>"+expense+"</td>"+
+                            +"<td>"+newExpense+"</td>"+
                             "<td><button type='button' id='editBtn'><i class='fas fa-edit' id='edit'></i></button><button type='button' id='deleteBtn'><i class='fas fa-trash' id='delete'></i></button></td></tr>"
                     );
-                    var budget=$(".bg").text();
-                    var bud=parseInt(budget);
-                    var expenseText=$(".exp").val();
-                    var exx=parseInt(expenseText);
-                    var expense1=0;
-                    expense1+=exx;
-                    console.log(expense1);
-                    $(".exp").text(expense1);
-
-                    var bal=bud-exx;
-                    $(".balance").text(bal);
-                    console.log(bal);
                 });
             });
         </script>
@@ -115,7 +124,7 @@
             <div class="budgetInput">
                 <form class="budgetForm">
                     <label name="budgetInputTitle" style="margin-top: 10px;">Please Enter Your Budget</label><br>
-                    <input type="text" name="budget" id="budgetText" style="margin-top: 10px; width: 90%;height: 20px;"><br>
+                    <input type="text" name="budget" id="budgetInputField" style="margin-top: 10px; width: 90%;height: 20px;"><br>
                     <button type="button" name="calBudget" id="calculate" style="margin-top: 10px; width:auto;">Calculate</button><br>
                 </form>
             </div>
@@ -124,7 +133,7 @@
                     <label name="expenseInputTitle">Please Enter Your Expense Name</label><br>
                     <input type="text" name="expenseName" id="expenseNameText" style="margin-top: 10px; width: 90%;height: 20px;"><br>
                     <label name="expenseTitle">Please Enter Your Expense Amount</label><br>
-                    <input type="text" name="expense" id="expense" class="exp" style="margin-top: 10px; width: 90%;height: 20px;"><br>
+                    <input type="text" name="expense" id="expenseTextField" class="exp" style="margin-top: 10px; width: 90%;height: 20px;"><br>
                     <button type="button" name="addExpense" id="addExpense" style="margin-top: 10px; width: auto;">Add Expense</button>
                 </form>
             </div>
@@ -134,17 +143,17 @@
                 <div class="list">
                     <p style="font-size: 24px; font-style:bold;">BUDGET</p>
                     <i class="fas fa-money-bill-alt" style="font-size: 48px; color: blue;"></i>
-                    <h1>$<span id="bud" class="bg">0</span></h1>
+                    <h1>$<span id="budget">0</span></h1>
                 </div>
                 <div class="list">
                     <p style="font-size: 24px; font-style:bold;">EXPENSES</p>
                     <i class="far fa-credit-card" style="font-size: 48px; color: blue;"></i>
-                    <h1>$<span id="ep" class="exp">0</span></h1>
+                    <h1>$<span id="expense">0</span></h1>
                 </div>
                 <div class="list">
                     <p style="font-size: 24px; font-style:bold;">BALANCE</p>
                     <i class="fas fa-dollar-sign" style="font-size: 48px; color: blue;"></i>                    
-                    <h1>$<span id="bal" class="balance">0</span></h1>
+                    <h1>$<span id="balance">0</span></h1>
                 </div>
             </div>
             <table class="expenseTable">
