@@ -19,44 +19,43 @@
             .input{
                 position: relative;
                 width: 40%;
-                display:flex;
-                flex-wrap: wrap;
+                float: left;
             }
             .budgetInput{
                 position: relative;
                 padding: 20px;
-                width: 100%;
-                height: 100px;
-                margin-top: 10px;
+                width: 90%;
+                height: auto;
                 background-color: rgb(235, 233, 230);
                 border: 2px solid green;
             }
             .expenseInput{
+                position: initial;
                 padding: 20px;
-                width: 100%;
-                height: 150px;
-                margin-top: 40px;
+                width: 90%;
+                height: auto;
+                margin-top: 50px;
                 background-color: rgb(235, 233, 230);
                 border: 2px solid red;
             }
             .output{
                 position: relative;
-                width: 60%;
+                width: 56%;
                 height: auto;
             }
             .outputlist{
+                margin-top: -20px;
                 margin-left: 20px;
                 width: 100%;
-                height: 300px;
                 display: flex;
                 flex-wrap: wrap;
             }
             .list{
-                margin-top: 10px;
                 position: relative;
-                width: 200px;
+                width: 190px;
                 display: block;
                 margin-left: 10px;
+                margin-bottom: 10px;
                 text-align: center;
             }
             .expenseTable{
@@ -117,7 +116,7 @@
                 <form class="budgetForm">
                     <label name="budgetInputTitle" style="margin-top: 10px;">Please Enter Your Budget</label><br>
                     <input type="text" name="budget" id="budgetText" style="margin-top: 10px; width: 90%;height: 20px;"><br>
-                    <button type="button" name="calBudget" id="calculate" style="margin-top: 10px; width:30%;">Calculate</button><br>
+                    <button type="button" name="calBudget" id="calculate" style="margin-top: 10px; width:auto;">Calculate</button><br>
                 </form>
             </div>
             <div class="expenseInput">
@@ -126,7 +125,7 @@
                     <input type="text" name="expenseName" id="expenseNameText" style="margin-top: 10px; width: 90%;height: 20px;"><br>
                     <label name="expenseTitle">Please Enter Your Expense Amount</label><br>
                     <input type="text" name="expense" id="expense" class="exp" style="margin-top: 10px; width: 90%;height: 20px;"><br>
-                    <button type="button" name="addExpense" id="addExpense">Add Expense</button>
+                    <button type="button" name="addExpense" id="addExpense" style="margin-top: 10px; width: auto;">Add Expense</button>
                 </form>
             </div>
         </div>
