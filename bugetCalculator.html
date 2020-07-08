@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Execises</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+        <style>
+            body{
+                font-size: 18px;
+            }
+            h1{
+                overflow: hidden;
+            }
+            .main{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .input{
+                position: relative;
+                width: 40%;
+                display:flex;
+                flex-wrap: wrap;
+            }
+            .budgetInput{
+                padding: 20px;
+                width: 100%;
+                height: 100px;
+                margin-top: 10px;
+                background-color: rgb(235, 233, 230);
+                border: 2px solid green;
+            }
+            .expenseInput{
+                padding: 20px;
+                width: 100%;
+                height: 150px;
+                margin-top: 40px;
+                background-color: rgb(235, 233, 230);
+                border: 2px solid red;
+            }
+            .output{
+                position: relative;
+                width: 60%;
+                height: auto;
+            }
+            .outputlist{
+                margin-left: 20px;
+                width: 100%;
+                height: 300px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .list{
+                margin-top: 10px;
+                position: relative;
+                width: 200px;
+                display: block;
+                margin-left: 10px;
+                text-align: center;
+            }
+            .expenseTable{
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#calculate").click(function(){
+                   var budget= $("#budgetText").val();
+                   $("#bud").text(budget);
+                });
+            });
+            $(document).ready(function(){  
+                $("#addExpense").click(function(){
+                    var ename=$("#expenseNameText").val();
+                    var expense=$("#expense").val();
+                    $("#expList").append(
+                        "<tr>"
+                            +"<td>"+ename+"</td>"
+                            +"<td>"+expense+"</td>"+
+                            "<td><i class='fas fa-edit'></i><i class='fas fa-trash'></i></td></tr>"
+                    );
+                    var ee=parseInt(expense);
+                    var exp=parseInt($("#ep").text());
+                    exp+=ee;
+                    $(".exp").text(exp);
+                    var bal=parseInt(budget)-parseInt(expense);
+                    $(".balance").text(bal);
+                    
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>BUDGET CALCULATOR</h1>
+        <div class="main">
+        <div class="input">
+            <div class="budgetInput">
+                <form class="budgetForm">
+                    <label name="budgetInputTitle" style="margin-top: 10px;">Please Enter Your Budget</label><br>
+                    <input type="text" name="budget" id="budgetText" style="margin-top: 10px; width: 90%;height: 20px;"><br>
+                    <button type="button" name="calBudget" id="calculate" style="margin-top: 10px; width:30%;">Calculate</button><br>
+                </form>
+            </div>
+            <div class="expenseInput">
+                <form class="expenseForm">
+                    <label name="expenseInputTitle">Please Enter Your Expense Name</label><br>
+                    <input type="text" name="expenseName" id="expenseNameText" style="margin-top: 10px; width: 90%;height: 20px;"><br>
+                    <label name="expenseTitle">Please Enter Your Expense Amount</label><br>
+                    <input type="text" name="expense" id="expense" class="exp" style="margin-top: 10px; width: 90%;height: 20px;"><br>
+                    <button type="button" name="addExpense" id="addExpense">Add Expense</button>
+                </form>
+            </div>
+        </div>
+        <div class="output">
+            <div class="outputlist">
+                <div class="list">
+                    <p style="font-size: 24px; font-style:bold;">BUDGET</p>
+                    <i class="fas fa-money-bill-alt" style="font-size: 48px; color: blue;"></i>
+                    <h1 id="bud" class="bg">$ 0</h1>
+                </div>
+                <div class="list">
+                    <p style="font-size: 24px; font-style:bold;">EXPENSES</p>
+                    <i class="far fa-credit-card" style="font-size: 48px; color: blue;"></i>
+                    <h1 id="ep" class="exp">$ 0</h1>
+                </div>
+                <div class="list">
+                    <p style="font-size: 24px; font-style:bold;">BALANCE</p>
+                    <i class="fas fa-dollar-sign" style="font-size: 48px; color: blue;"></i>                    
+                    <h1 id="bal" class="balance">$ 0</h1>
+                </div>
+            </div>
+            <table class="expenseTable">
+                <tr>
+                    <th>Expense Title</th>
+                    <th>Expense Value</th>
+                    <th>   </th>
+                </tr>    
+                <tbody id="expList">
+
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>
