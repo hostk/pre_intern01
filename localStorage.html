@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Execises</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            
+            var studentList=[];
+                studentList=JSON.parse(localStorage.getItem("student_list"));
+                studentList.forEach(element => {
+                    $(".table").append(
+                    "<tr><td>"+element.name+"</td><td>"
+                    +element.rollno+"</td></tr>"
+                );
+                });
+                
+            $("#addBtn").click(function(){
+              var name= $("#nameField").val();
+              var rollno=$("#rollField").val();
+              var std={name:name,rollno:rollno};
+              studentList.push(std);
+              localStorage.setItem("student_list",JSON.stringify(studentList));
+              $("#nameField").val("");
+              $("#rollField").val("");  
+
+            });
+        });
+    </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" placeholder="Enter Your Name" id="nameField"><br>
+            <input type="text" placeholder="Enter Your Roll No" id="rollField"><br>
+            <button type="button" id="addBtn">Add</button>
+        </form>
+        <p id="demo"></p>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>rollno</th>
+            </tr>
+        </table>
+    </body>
+
+</html>
