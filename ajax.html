@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function save() {
+                // Creating the XMLHttpRequest object
+              var obj=  JSON.stringify({
+      title: document.getElementById("title").value,
+      body: document.getElementById("body").value,
+      userId: document.getElementById("userId").value
+    });
+    alert("In Save");
+                var request = new XMLHttpRequest();
+            
+                // Instantiating the request object
+                request.open("POST", "https://jsonplaceholder.typicode.com/posts",true);
+            
+                // Defining event listener for readystatechange event
+                request.onreadystatechange = function() {
+                    // Check if the request is compete and was successful
+                    alert(this.status)
+                    if(this.readyState === 4 && this.status === 200) {
+                        // Inserting the response from server into an HTML element
+                        alert(this.responseText);
+                        var obj= JSON.parse(this.responseText);
+                        document.getElementById("result").innerHTML = obj.title;
+                    }
+                };
+                alert(obj);
+                // Sending the request to the server
+                request.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+                request.send(obj);
+            }
+            function displayFullName() {
+                // Creating the XMLHttpRequest object
+                var request = new XMLHttpRequest();
+            
+                // Instantiating the request object
+                request.open("GET", "https://jsonplaceholder.typicode.com/posts/1");
+            
+                // Defining event listener for readystatechange event
+                request.onreadystatechange = function() {
+                    // Check if the request is compete and was successful
+                    if(this.readyState === 4 && this.status === 200) {
+                        // Inserting the response from server into an HTML element
+                        var obj= JSON.parse(this.responseText);
+                        alert(obj.title);
+                        document.getElementById("result").innerHTML = obj.title;
+                    }
+                };
+            
+                // Sending the request to the server
+                request.send();
+            }
+            </script>
+    </head>
+    <body>
+        <div>
+        <label>
+        Title
+        </label><input type="text" id="title" />
+        <br>
+        <label>Body</label><input type="text" id="body" /><br>
+        <label>User Id</label><input type="text" id="userId" /><br>
+        <input type="button" value="Save" onclick="save();" />
+        </div>
+        <div>
+            <p id="result">Content of the result DIV box will be replaced by the server response</p>
+        </div>
+        <button type="button" onclick="displayFullName()">Display Full Name</button>
+    </body>
+</html>
