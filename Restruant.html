@@ -185,12 +185,17 @@
                     </div>                
                 </div>
                 </div>
-                <div class="modal fade" id="modalExample" role="table" tabindex="-1">
+                <div class="modal" id="modalExample" role="dialog" tabindex="-1">
                     <div class="container-fluid">
-                        <div class="modal-body text-light">
-                            <h4 class="modal-title text-center">Your Order List</h4>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title text-center">Your Order List</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            </div>
+                        <div class="modal-body">
                             <div class="text-center">
-                        <table class="showOrders table p-1 text-light">
+                        <table class="showOrders table p-1">
                             <tr>
                                 <th>ItemName</th>
                                 <th>Price</th>
@@ -200,6 +205,11 @@
                                 <th>$ <span class="total"> 0</span></th>
                             </tfoot>
                         </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
                         </div>
                         </div>
                     </div>
