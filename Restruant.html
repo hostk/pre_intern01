@@ -7,13 +7,31 @@
             body{
                 font-size: 18px;
             }
+            .modal{
+                width: 40%;
+                margin-left: 40%;
+            }
         </style>
         <script>
             $(document).ready(function(){
                 $(".orderBtn").click(function(){
-                    var order=$(".card-body > .dollarLabel").text();
-                    alert(order);
+                    $(".show").show();
+                    var order=$(".dollarLabel").text();
+                    var orderName=$(".card-title").text();
+                    var orders={orderName:orderName,price:order};
+                    var order_list=[];
+                    order_list.push(orders);   
+                    localStorage.setItem("order_list",JSON.stringify(order_list));  
+                    order_list.forEach(Element=>{
+                        $(".showOrders").append(
+                    "<tr><td>"+Element.orderName+"</td><td>"+Element.price+"</td></tr>"
+                    );
+                    });
+                    var total=$("tfooter").text();
+                    
+                    $(".showOrderList").show();
                 });
+                $(".show").hide();
             });
         </script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -104,10 +122,10 @@
                         <img src="resturantImage/f1.jpeg" width="120" height="100">
                             <div class="card-body" style="margin-top: -20px;">
                                 <h5 class="card-title">Baked Ziti</h5>
-                                <label class="bg-light text-danger float-right border dollarLabel" style="margin-top:-30px;" id="dollarLabel">$119</label>
+                                <label class="bg-light text-danger float-right border" style="margin-top:-30px;">$<span class="dollarLabel">119</span></label>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eligendi, iusto tempore, placeat animi quidem nesciunt blanditiis quisquam!
                                 </p>
-                                <button type="button" id="orderBtn" class="btn btn-danger orderBtn" id="orderBtn" style="float: right;margin-top: -45px;position: relative; border-style: none;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <button type="button" id="orderBtn" class="btn btn-danger orderBtn" data-toggle="modal" data-target="#modalExample" id="orderBtn" style="float: right;margin-top: -45px;position: relative; border-style: none;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
                                 <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
                               </svg>ORDER</button>
@@ -117,7 +135,7 @@
                         <img src="resturantImage/f2.jpeg" width="120" height="100">
                             <div class="card-body" style="margin-top: -20px;">
                                 <h5 class="card-title">Chicken Broccoli Alfredo</h5>
-                                <label class="bg-light text-danger float-right border dollarLabel" style="margin-top:-30px;" id="dollarLabel">$129</label>
+                                <label class="bg-light text-danger float-right border" style="margin-top:-30px;">$<span class="dollarLabel">119</span></label>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eligendi, iusto tempore, placeat animi quidem nesciunt blanditiis quisquam!
                                 </p>
                                 <button id="orderBtn" type="button" class="btn btn-danger orderBtn" style="float: right; margin-top: -45px;position: relative; border-style: none;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +148,7 @@
                             <img src="resturantImage/f3.jpeg" width="120" height="100">
                                 <div class="card-body" style="margin-top: -20px;">
                                     <h5 class="card-title">Chicken Cacciatore</h5>
-                                    <label class="bg-light text-danger float-right border dollarLabel" style="margin-top:-30px;">$119</label>
+                                    <label class="bg-light text-danger float-right border" style="margin-top:-30px;">$<span class="dollarLabel">119</span></label>
                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eligendi, iusto tempore, placeat animi quidem nesciunt blanditiis quisquam!
                                     </p>
                                     <button type="button" class="btn btn-danger orderBtn" style="float: right; margin-top: -45px;position: relative; border-style: none;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -143,7 +161,7 @@
                                 <img src="resturantImage/f3.jpg" width="120" height="100">
                                     <div class="card-body" style="margin-top: -20px;">
                                         <h5 class="card-title">Baked Ziti</h5>
-                                        <label class="bg-light text-danger float-right border dollarLabel" style="margin-top:-30px;">$119</label>
+                                        <label class="bg-light text-danger float-right border" style="margin-top:-30px;">$<span class="dollarLabel">119</span></label>
                                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eligendi, iusto tempore, placeat animi quidem nesciunt blanditiis quisquam!</p>
                                         <button type="button" class="btn btn-danger orderBtn" style="float: right; margin-top: -45px;position: relative; border-style: none;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
@@ -155,7 +173,7 @@
                                     <img src="resturantImage/f4.jpeg    " width="120" height="100">
                                         <div class="card-body" style="margin-top: -20px;">
                                             <h5 class="card-title">Baked Ziti</h5>
-                                            <label class="bg-light text-danger float-right border dollarLabel" style="margin-top:-30px;">$119</label>
+                                            <label class="bg-light text-danger float-right border" style="margin-top:-30px;">$<span class="dollarLabel">119</span></label>
                                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eligendi, iusto tempore, placeat animi quidem nesciunt blanditiis quisquam!
                                             </p>
                                             <button type="button" class="btn btn-danger orderBtn" style="float: right; margin-top: -45px;position: relative; border-style: none;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -166,6 +184,25 @@
                                 </div>
                     </div>                
                 </div>
+                </div>
+                <div class="modal fade" id="modalExample" role="table" tabindex="-1">
+                    <div class="container-fluid">
+                        <div class="modal-body text-light">
+                            <h4 class="modal-title text-center">Your Order List</h4>
+                            <div class="text-center">
+                        <table class="showOrders table p-1 text-light">
+                            <tr>
+                                <th>ItemName</th>
+                                <th>Price</th>
+                            </tr>
+                            <tfoot class="tfooter">
+                                <th></th>
+                                <th>$ <span class="total"> 0</span></th>
+                            </tfoot>
+                        </table>
+                        </div>
+                        </div>
+                    </div>
                 </div>
                 <!--Entrees id close-->
                 </div>
