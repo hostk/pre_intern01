@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Resturant Menu Order System</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            body{
+                font-size: 18px;
+            }
+            .modal{
+                width: 40%;
+                margin-left: 40%;
+            }
+        </style>
+        <script>
+            var categoryList=[];
+            var foodList=[];
+            var orderlist=[];
+            
+            if(typeof(Storage)!=undefined){
+                if(localStorage.getItem("food_list")!=undefined){
+                    var clist=localStorage.getItem("category_list");
+                    var flist=localStorage.getItem("food_list");
+                    categoryList=JSON.parse(clist);
+                    foodList=JSON.parse(flist);
+                }
+            }
+            function showCategory(){
+                var categoryString=localStorage.getItem("category_list");
+                categoryList=JSON.parse(categoryString);
+                categoryList.forEach(function(element,i){
+                    $("#categoryNav").append(
+                        '<li class="nav-item p-1 border-bottom"><a href="#" class="nav-link text-dark" id="c'+i+'" role="button"><i class="fas fa-long-arrow-alt-right" style="color: lightslategray;"></i>'+element.categoryName+'</a></li>'
+                    );
+                    console.log(i);
+                });
+            }
+            function showFood(){
+                var foodString=localStorage.getItem("food_list");
+                foodList=JSON.parse(foodString);
+                foodList.forEach(function(f,i){
+                    $("#foodcards").append(
+                        '<div class="card flex-row" id="card'+i+'">'+
+                        '<img src="'+f.imageUrl+'" width="120" height="100"><div class="card-body" style="margin-top: -20px;">'+
+                        '<h5 class="card-title">'+f.fname+'</h5>'+
+                        '<label class="bg-light text-danger float-right border" style="margin-top:-30px;">$<span class="dollar">'+f.fprice+'</span></label>'+
+                        '<p class="card-text">'+f.desc+'</p>'+
+                        '<button type="button" onclick="orderBtn('+i+')" class="btn btn-danger orderBtn" data-toggle="modal" data-target="#modalExample" id="orderBtn" style="float: right;margin-top: -45px;position: relative; border-style: none;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">'+
+                        '<path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>'+
+                        '<path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>'+
+                        '</svg>ORDER</button></div></div>'
+                    );
+                })
+            }
+           
+            function orderBtn(o){
+                var foodString=localStorage.getItem("food_list");
+                foodList=JSON.parse(foodString);
+                var oldPrice=$("#total").text();
+                var old=parseFloat(oldPrice);
+                var price=foodList[o].fprice;
+                var name=foodList[o].fname;
+                var newPrice=parseFloat(price);
+                var orderString={orderName:name,orderPrice:price};
+                orderlist.push(orderString);
+                old+=newPrice;
+
+                localStorage.setItem("order_list",JSON.stringify(orderlist));
+                $("#orderlist tbody").append(
+                    "<tr><td>"+name+"</td><td>"+newPrice+"</td></tr>"
+                );
+                $("#total").text(old);
+
+               
+            }
+            $(document).ready(function(){
+                    showCategory();
+                    showFood();
+            });
+        </script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </head>
+    <body> 
+        <div class="container-fluid text-18" style="margin-top: 10px;">
+            <div class="row row-cols-2">
+                    <div class="col-sm-6 col-md-3" style="background-image: url('resturantImage/f1.jpeg');">     
+                        <ul class="nav flex-column  nav-light border-left bg-light" style="width: 100%; margin-right: -10px;">
+                                <li class="nav-brand bg-warning border" style="margin-left: -10px;">
+                                    <a href="index.html" class="btn btn-warning">Restaurant Menu Order System</a>
+                                </li>
+                                <li class="nav-item p-1 border-bottom">
+                                    <a href="category.html" class="nav-link text-dark text-decoration-none" role="button"><i class="fas fa-long-arrow-alt-right" style="color: lightslategray;"></i>Manage Category</a>
+                                </li>
+                                <li class="nav-item p-1 border-bottom">
+                                    <a href="food.html" class="nav-link text-dark" role="button"><i class="fas fa-long-arrow-alt-right" style="color: lightslategray;"></i>Manage Food</a>
+                                </li>
+                                <li class="nav-item p-1 border-bottom">
+                                    <a href="foodorder.html" class="nav-link text-dark" role="button"><i class="fas fa-long-arrow-alt-right" style="color: lightslategray;"></i>Food Order</a>
+                                </li>
+                                <li>
+                                    <ul id="categoryNav" class="col-flex list-unstyled ml-5">
+                                        
+                                        </ul>
+                                </li>
+                                
+                        </ul>
+                    </div>  
+                <!--Left navbar close-->  
+
+                <div class="col-sm-6 col-md-9">
+                <div class="container-fluid border-left">
+                <form class="container-fluid bg-warning">
+                    <input type="search" placeholder="Search our menu..." id="searchTextField" class="col-8 col-md-11">
+                    <button type="button" id="btnSearch" name="search" class="btn btn-dark"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                      </svg></button>
+                </form>
+                <div id="entrees">
+                    <h1 class="h1" style="margin-bottom: 20px; margin-top: 10px;">All Items</h1>
+                    <div class="row row-cols-2">
+                        <div class="col-md-8" id="foodcards">
+                            
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <table class="table table-bordered" id="orderlist">
+                                <thead class="table-dark">
+                                    <th>ItemName</th>
+                                    <th>Price</th>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>Total Price</td>
+                                        <td id="total">0</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>               
+                    </div>
+                </div>
+                
+            </div>
+        </div>    
+    </body>
+</html>
