@@ -21,9 +21,9 @@
                     var foodString =localStorage.getItem("food_list");
                     flist=JSON.parse(foodString);
                 }else{
-                    var food_list={fname:"",desc:"",fprice:"",imageUrl:"",category:""};
-                    flist.push(food_list);
-                    localStorage.setItem(JSON.stringify(flist));
+                    var foodString={fname:"",desc:"",fprice:"",imageUrl:"",category:""};
+                    flist.push(foodString);
+                    localStorage.setItem("food_list",JSON.stringify(flist));
                 }
             }
             $(document).ready(function(){
@@ -32,6 +32,15 @@
             });
                 
                 function addFood(){
+                    $("#foodTable tbody").empty();
+                    if($("#current").val()!=""){
+                        var id=parseInt($("#current").val());
+                        flist[id].fname=$("#foodNameField").val();
+                        flist[id].fdesc=$("#descField").val();
+                        flist[id].fprice=$("#priceField").val();
+                        console.log(JSON.stringify(flist[id]));
+                        
+                    }else{
                     var name=$("#foodNameField").val();
                     var desc=$("#descField").val();
                     var price=$("#priceField").val();
@@ -41,13 +50,14 @@
                         if(select[i].checked){
                            categoryName=this.val();
                         }
-                        showFoods();
                     }
                     var url=$("#imageUrlField").val();
                     var food_list={fname:name,desc:desc,fprice:price,imageUrl:url,category:categoryName};
                     flist.push(food_list);   
+                    }
                     localStorage.setItem("food_list",JSON.stringify(flist));
-                    showFoods();                    
+                    showFoods();
+                                        
                 }
                 function showCategory(){
                     var categoryString=localStorage.getItem("category_list");
@@ -60,19 +70,54 @@
                 }
 
                     function showFoods(){
-                        $("#foodTable").empty();
+                        $("#foodTable tbody").empty();
                         var foodString=localStorage.getItem("food_list");
                         flist=JSON.parse(foodString);
-                        flist.forEach(Element => {
-                        $("#foodTable").append(
-                        "<tr><td>"+Element.fname+"</td><td>"
-                        +Element.desc+"</td><td>"+Element.fprice+"</td><td>"+Element.imageUrl+"</td><td>"+Element.category+"</td></tr>"
+                        flist.forEach(function(f,i) {
+                        $("#foodTable tbody").append(
+                        "<tr><td>"+f.fname+"</td><td>"
+                        +f.desc+"</td><td>"+f.fprice+"</td><td>"+f.imageUrl+"</td><td>"+f.category+"</td><td><button type='button' onclick='editText("+i
+                    +")' id='editBtn'><i class='fas fa-edit' id='edit'></i></button><button type='button' onclick='deleteText("+i+")' id='deleteBtn'><i class='fas fa-trash' id='delete'></i></button></td></tr>"
                     );
                         });
-                    clear();
                     }
+                    function deleteText(o){
+                        $("#foodTable tbody").empty();
+                            console.log("before delete:"+flist);
+                             if(o > -1){
+                                flist.splice(o,1);
+                                localStorage.setItem("food_list",JSON.stringify(flist));
+                                showFoods();
+                            }
+                console.log(flist);
+                }
+                function editText(o){
+                    $("#addFoodBtn").prop("value","Update");
+                    $("#addFoodBtn").html("Updated");
+
+                    if(o > -1){
+                        var foodString=localStorage.getItem("food_list");
+                        flist=JSON.parse(foodString);
+                        var cur_food=flist[o];
+                        var fname=cur_food.fname;
+                        var fdesc=cur_food.desc;
+                        var fprice=cur_food.fprice;
+                        var furl=cur_food.imageUrl;
+
+                        $("#imageUrlField").val(furl);
+                        $("#foodNameField").val(fname);
+                        $("#descField").val(fdesc);
+                        $("#priceField").val(fprice);
+
+                        $("#current").val(o);
+                        console.log(name);
+                            console.log(JSON.stringify(cur_food));
+                            console.log('before'+JSON.stringify(category_list));                        
+                    }
+                }    
+
                     function clear(){
-                        $("#categoryTable").empty();
+                        $("#categoryTable tr").empty();
                     }
         </script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -115,21 +160,28 @@
 
                 <div class="row row-cols-2">
                     <form class="col-md-4 mt-5 ml-2 text-center">
+                        <input type="hidden" id="current">
                         <input type="text" class="mt-1" name="foodname" id="foodNameField" placeholder="Food Name"><br>
                         <input type="number" class="mt-1" name="price" id="priceField" placeholder="Price.."><br>
                         <select name="category" id="category"></select><br>
                         <input type="text" class="mt-1" name="desc" id="descField" placeholder="Description"><br>
                         <input type="text" class="mt-1" name="imageUrl" id="imageUrlField" placeholder="ImageUrl"><br>
-                        <button type="button" class="mt-1" name="food" onclick="addFood()">Add Food</button>
+                        <button type="button" class="mt-1" name="food" id="addFoodBtn" onclick="addFood()">Add Food</button>
                     </form>
                     <div class="col-md-7 mt-5">
                     <table class="table table-warning text-center" id="foodTable">
+                        <thead>
                         <tr class="tr">
                             <th>Name</th>
                             <th>Description</th>
                             <th>Price</th>
                             <th>ImageUrl</th>
+                            <th></th>
                         </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
                     </table>
                     </div>
                     <script>
