@@ -27,36 +27,67 @@
             
 
             function show(){
+                    $("#categoryTable").empty();
                     category_list=JSON.parse(localStorage.getItem("category_list")); 
                     var n=0;
                     category_list.forEach(function(cat,i){
                         n++;
-                        i++;
                         $("#categoryTable").append(
-                    "<tr><td>"+n+"</td><td>"+cat.categoryName+"</td><td><button type='button' onclick='editText("+i
+                    "<tr><td>"+n+"</td><td id='cname'>"+cat.categoryName+"</td><td><button type='button' onclick='editText("+i
                     +")' id='editBtn'><i class='fas fa-edit' id='edit'></i></button><button type='button' onclick='deleteText("+i+")' id='deleteBtn'><i class='fas fa-trash' id='delete'></i></button></td></tr>");
                     });
+                    clear();
             }
-            function editText(o){
-                var currentCategory=category_list[o];
-                alert(currentCategory);
+            function deleteText(o){
+                $("#categoryTable").empty();
+                console.log("before delete:"+category_list);
+                if(o>-1){
+                category_list.splice(o,1);
+                localStorage.setItem("category_list",JSON.stringify(category_list));
+                show();
                 }
-                function deleteText(o){
-                    delete category_list[o];
-                    alert(category_list[0]);
-                $(this).closest("tr").remove();
+                console.log(category_list);
+                }
+                function editText(o){
+
+                    if(o>-1){
+                        var categoryString=localStorage.getItem("category_list");
+                        category_list=JSON.parse(categoryString);
+                        var cur_cat=category_list[o];
+                        var name=cur_cat.categoryName;
+                        $("#current").val(o);
+                        $("#category").val(name);
+                        console.log(name);
+                            console.log(JSON.stringify(cur_cat));
+                            console.log('before'+JSON.stringify(category_list));                        
+                    }
                 }    
 
                 function clear(){
-                    $("#category").empty();
-                    $("#categoryTable").empty();
+                    $("#category").val("");
+                    $("#current").val("");
                 }
                 function addCategory(){
-                        var categoryName=$("#category").val();
+                    if($("#category").val()!=undefined){
+                        if($("#current").val()!=""){
+                            var id=parseInt($("#current").val());
+                            category_list[id].categoryName=$("#category").val();
+                            console.log(category_list[id].categoryName);
+                             clear();
+                        }else{
+                            
+                            var categoryName=$("#category").val();
                         var category={categoryName:categoryName};
-                        category_list.push(category);   
+                        category_list.push(category);
+                        }
+                         
                         localStorage.setItem("category_list",JSON.stringify(category_list)); 
                         show();
+                        clear();
+                    }else{
+                        alert("please Enter the  category Name.")
+                    }
+                        
             }
         </script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -98,15 +129,16 @@
                         <div>
                             <div class="row row-cols-2" id="categoryPanel">
                             <form class="col-sm-6 col-md-5 mt-5 ml-5">
+                               <input type="hidden" id="current" />
                                 <input type="text" class="mt-1" name="category" id="category" placeholder="Enter the category name">
                                 <button onclick="addCategory();" type="button" class="btn btn-warning mt-1" name="categoryAdd">Add Category</button>
                             </form>
-                            <div class="col-sm-4 col-md-6 mt-5">
-                            <table class="table text-center" id="categoryTable">
-                                <tr class="table-header head-dark">
-                                    <th>#</th>
-                                    <th>CategoryName</th>
-                                </tr>
+                            <div class="col-sm-4 col-md-6 mt-5 ">
+                            <table class="table text-center text-dark" id="categoryTable">
+                                <thead>
+                                    <td class="col">#</td>
+                                    <td class="col">CategoryName</td>
+                                </thead>
                             </table>
                             </div>
                             </div>
