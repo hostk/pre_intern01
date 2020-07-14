@@ -20,6 +20,10 @@
                 if(localStorage.getItem("food_list")!=undefined){
                     var foodString =localStorage.getItem("food_list");
                     flist=JSON.parse(foodString);
+                }else{
+                    var food_list={fname:"",desc:"",fprice:"",imageUrl:"",category:""};
+                    flist.push(food_list);
+                    localStorage.setItem(JSON.stringify(flist));
                 }
             }
             $(document).ready(function(){
@@ -56,6 +60,7 @@
                 }
 
                     function showFoods(){
+                        $("#foodTable").empty();
                         var foodString=localStorage.getItem("food_list");
                         flist=JSON.parse(foodString);
                         flist.forEach(Element => {
