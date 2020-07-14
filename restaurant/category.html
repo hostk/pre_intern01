@@ -14,7 +14,7 @@
         </style>
         <script>
             $(document).ready(function(){
-                show();
+                //show();
             });
             var category_list=[];
                /* if(typeof(Storage)!=undefined){
@@ -26,7 +26,7 @@
                 }*/
             
 
-            function show(){
+           /* function show(){
                     category_list=JSON.parse(localStorage.getItem("category_list")); 
                     var n=0;
                     category_list.forEach(function(cat,i){
@@ -36,7 +36,7 @@
                     "<tr><td>"+n+"</td><td>"+cat.categoryName+"</td><td><button type='button' onclick='editText("+i
                     +")' id='editBtn'><i class='fas fa-edit' id='edit'></i></button><button type='button' onclick='deleteText("+i+")' id='deleteBtn'><i class='fas fa-trash' id='delete'></i></button></td></tr>");
                     });
-            }
+            }*/
             function editText(o){
                 var currentCategory=category_list[o];
                 alert(currentCategory);
@@ -56,7 +56,7 @@
                         var category={categoryName:categoryName};
                         category_list.push(category);   
                         localStorage.setItem("category_list",JSON.stringify(category_list)); 
-                        show();
+                        //show();
             }
         </script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
