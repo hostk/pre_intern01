@@ -24,7 +24,7 @@
             }
             $(document).ready(function(){
                 showCategory();
-                showFoods();
+                //showFoods();
             });
                 
                 function addFood(){
@@ -37,13 +37,13 @@
                         if(select[i].checked){
                            categoryName=this.val();
                         }
-                        showFoods();
+                       // showFoods();
                     }
                     var url=$("#imageUrlField").val();
                     var food_list={fname:name,desc:desc,fprice:price,imageUrl:url,category:categoryName};
                     flist.push(food_list);   
                     localStorage.setItem("food_list",JSON.stringify(flist));
-                    showFoods();                    
+                    //showFoods();                    
                 }
                 function showCategory(){
                     var categoryString=localStorage.getItem("category_list");
@@ -55,7 +55,7 @@
                     });
                 }
 
-                    function showFoods(){
+                /*    function showFoods(){
                         var foodString=localStorage.getItem("food_list");
                         flist=JSON.parse(foodString);
                         flist.forEach(Element => {
@@ -65,7 +65,7 @@
                     );
                         });
                     clear();
-                    }
+                    }*/
                     function clear(){
                         $("#categoryTable").empty();
                     }
