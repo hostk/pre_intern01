@@ -22,24 +22,27 @@
                         var categoryString =localStorage.getItem("category_list");
                         category_list=JSON.parse(categoryString);
                         alert(category_list);
+                    }else{
+                        var categoryString={categoryName:""};
+                        category_list.push(categoryString);
+                        localStorage.setItem("category_list",JSON.stringify(category_list));
                     }
                 }
             
 
             function show(){
-                    $("#categoryTable").empty();
                     category_list=JSON.parse(localStorage.getItem("category_list")); 
                     var n=0;
                     category_list.forEach(function(cat,i){
                         n++;
-                        $("#categoryTable").append(
+                        $("#categoryTable > tbody").append(
                     "<tr><td>"+n+"</td><td id='cname'>"+cat.categoryName+"</td><td><button type='button' onclick='editText("+i
                     +")' id='editBtn'><i class='fas fa-edit' id='edit'></i></button><button type='button' onclick='deleteText("+i+")' id='deleteBtn'><i class='fas fa-trash' id='delete'></i></button></td></tr>");
                     });
                     clear();
             }
             function deleteText(o){
-                $("#categoryTable").empty();
+                $("#categoryTable tbody").empty();
                 console.log("before delete:"+category_list);
                 if(o>-1){
                 category_list.splice(o,1);
@@ -49,7 +52,8 @@
                 console.log(category_list);
                 }
                 function editText(o){
-
+                    $("#addCat").prop("value","Update");
+                    $("#addCat").html("Update");
                     if(o>-1){
                         var categoryString=localStorage.getItem("category_list");
                         category_list=JSON.parse(categoryString);
@@ -58,8 +62,8 @@
                         $("#current").val(o);
                         $("#category").val(name);
                         console.log(name);
-                            console.log(JSON.stringify(cur_cat));
-                            console.log('before'+JSON.stringify(category_list));                        
+                        console.log(JSON.stringify(cur_cat));
+                        console.log('before'+JSON.stringify(category_list));                        
                     }
                 }    
 
@@ -68,25 +72,20 @@
                     $("#current").val("");
                 }
                 function addCategory(){
+                    $("#categoryTable tbody").empty();
                     if($("#category").val()!=undefined){
                         if($("#current").val()!=""){
                             var id=parseInt($("#current").val());
                             category_list[id].categoryName=$("#category").val();
                             console.log(category_list[id].categoryName);
-                             clear();
-                        }else{
-                            
+                        }else{   
                             var categoryName=$("#category").val();
                         var category={categoryName:categoryName};
                         category_list.push(category);
                         }
-                         
                         localStorage.setItem("category_list",JSON.stringify(category_list)); 
-                        show();
-                        clear();
-                    }else{
-                        alert("please Enter the  category Name.")
                     }
+                    show();
                         
             }
         </script>
@@ -131,14 +130,20 @@
                             <form class="col-sm-6 col-md-5 mt-5 ml-5">
                                <input type="hidden" id="current" />
                                 <input type="text" class="mt-1" name="category" id="category" placeholder="Enter the category name">
-                                <button onclick="addCategory();" type="button" class="btn btn-warning mt-1" name="categoryAdd">Add Category</button>
+                                <button onclick="addCategory();" type="button" class="btn btn-warning mt-1" name="categoryAdd" id="addCat">Add Category</button>
                             </form>
                             <div class="col-sm-4 col-md-6 mt-5 ">
                             <table class="table text-center text-dark" id="categoryTable">
                                 <thead>
-                                    <td class="col">#</td>
-                                    <td class="col">CategoryName</td>
+                                    <tr>
+                                    <th class="col">#</th>
+                                    <th class="col">CategoryName</th>
+                                    <th class="col"></th>
+                                    </tr>
                                 </thead>
+                                <tbody>
+
+                                </tbody>
                             </table>
                             </div>
                             </div>
