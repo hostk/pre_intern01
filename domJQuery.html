@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Javascript Example
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+        <style>
+            form{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .div1{
+                width: 42%;
+            }
+            .div2{
+                margin-left: 30px;
+                width: 40%;
+                position: relative;
+                
+            }
+            .textpadding{
+                margin: 10px;
+                width: 100%;
+                height: 30px;
+            }
+            table{
+                border: 1px solid lightgray;
+                background-color: lightgreen;
+                color: lightsalmon;
+            }
+            tr{
+                border: 5px solid rebeccapurple;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#addBtn").click(function(){
+                    var name=$("#name").val();
+                    var gender=$("#radio").val();
+                    var subject=$("#checkbox").val();
+                    var phone=$("#phone").val();
+                    var email=$("#email").val();
+                    var address=$("#address").val();
+                    
+                    $("tbody").append(
+                        "<tr>"+"<td>"+name+"</td>"+
+                        "<td>"+gender+"</td>"+
+                        "<td>"+subject+"</td>"+
+                        "<td>"+phone+"</td>"+
+                        "<td>"+email+"</td>"+
+                        "<td>"+address+"</td>"+"</tr>");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form>
+            <div class="div1">
+            <input class="textpadding" type="text" name="name" id="name" placeholder="Enter the name"><br>
+            <input class="textpadding" type="phone" name="phone" id="phone" placeholder="Enter the phone number."><br>
+            <input class="textpadding" type="email" name="email" id="email" placeholder="Enter the email address"><br>
+            </div>
+            <div class="div2">
+            <input class="textpadding" type="text" name="address" id="address" placeholder="Enter the address"><br>
+            <input type="radio" name="gender" value="Male" id="radio"><label name="Male">Male</label>
+            <input type="radio" name="gender" value="Female" id="radio"><label name="Male">Female</label><br>
+            <input style="margin-top: 10px;margin-left: 10px;" type="checkbox" name="c1" value="501" id="checkbox"><label name="c1">501</label>
+            <input style="margin-top: 10px;margin-left: 10px;" type="checkbox" name="c1" value="502" id="checkbox"><label name="c1">502</label>
+            <input style="margin-top: 10px;margin-left: 10px;" type="checkbox" name="c1" value="503" id="checkbox"><label name="c1">503</label>
+            <button style="margin-left: 80%; border-radius: 20%; width: 100px; height: 40px;" type="button" id="addBtn">Add</button>
+            </div>
+        </form>    
+            <table id="table">
+                <thead>
+                    <th>Name</th>
+                    <th>gender</th>
+                    <th>Subject</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                </thead>
+                <tbody class="tbody">
+
+                </tbody>
+            </table>    
+    </body>
+</html>

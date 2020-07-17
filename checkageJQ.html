@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Date Check Execises</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+
+    </head>
+    <body>
+        <input type="date" id="date" name="date">
+        <button type="submit" id="checkBtn">Check</button>
+        <script>
+            $(document).ready(function(){
+                $("#checkBtn").click(function(){
+                    var date=$("#date").val();
+                    var d=new Date(2002,01,01);
+                    var realdate=new Date(date);
+                    if(realdate<d){
+                        alert("This is geater than 18 years old.");
+                    }else{
+                        alert("This is younger than 18 years old.")
+                    }
+                });
+            })    
+        </script>
+    </body>
+</html>

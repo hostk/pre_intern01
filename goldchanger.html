@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gold Shop</title>
+	
+</head>
+<body>
+	<h1>Welcome</h1>
+	<form name="Myform">
+		Gram:<input type="Gram" name="Gram" id="gram"><br>
+		Gold Price:<input type="Price" name="Gold_Price"><br>
+		<input type="button" value="Calculate" onclick="calculate()"><br>
+		Kyats<input type="number" name="Kyats" id="kyat"><br>
+		Pae<input type="number" name="Pae" id="pae"><br>
+		Yway<input type="number" name="Yway" id="yway"><br>
+		Total Price<input type="number" name="Price" id="price">
+    </form>
+    <script type="text/javascript">
+		function calculate(){
+            var gram=parseFloat(document.Myform.gram.value);
+            var gPrice=parseFloat(document.Myform.Gold_Price.value);
+            var k=gram/16.606;
+            var p=3*(k/16);
+            var y=2*(p/128);
+            var result=gPrice*(k+p+y);
+            document.Myform.Kyats.value=k.toFixed(0);
+            document.Myform.Pae.value=p.toFixed(2);
+            document.Myform.Yway.value=y.toFixed(4);
+            document.Myform.Price.value=result;
+        }
+	</script>
+</body>
+</html>

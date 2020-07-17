@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pre Intern Course</title>
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                document.querySelector('#form').onsubmit=function(){
+                     const name = document.querySelector('#name').value;
+                     alert('My name is '+name);
+                 }
+            });
+            document.addEventListener('DOMContentLoaded',function(){
+            document.querySelector('#btn').onclick=function(){
+                document.querySelector('#btn').style.background='red'; 
+
+            }
+            document.querySelector('#btn1').onclick=function(){
+                document.querySelector('#name').style.fontSize='36px';
+            }
+            document.querySelector('#btn1').onmouseover=function(){
+                document.querySelector('#name,#submit').style.fontSize='20px';
+            }
+
+        });
+        </script>
+    </head>
+    <body>
+        <form id='form'>
+            <input type="text" placeholder="Enter your name." id="name"/>
+            <input type="submit" id="submit" value="Submit"/>
+        </form>
+        <button type="button" id="btn">ChangeBG</button>
+        <button type="button" id="btn1">ChangeFontSize</button>
+
+    </body>
+</html>
